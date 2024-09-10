@@ -1,0 +1,569 @@
+
+#include "header.h"
+
+
+static const int32_t num_class[] = {  7, };
+
+int32_t get_num_target(void) {
+  return N_TARGET;
+}
+void get_num_class(int32_t* out) {
+  for (int i = 0; i < N_TARGET; ++i) {
+    out[i] = num_class[i];
+  }
+}
+int32_t get_num_feature(void) {
+  return 7;
+}
+const char* get_threshold_type(void) {
+  return "float32";
+}
+const char* get_leaf_output_type(void) {
+  return "float32";
+}
+
+
+void predict(union Entry* data, int pred_margin, float* result) {
+  unsigned int tmp;
+  if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)4) ) ) {
+    if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)108.5) ) ) {
+      if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)51) ) ) {
+        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)36.5) ) ) {
+          result[0] += 0;
+          result[1] += 0;
+          result[2] += 1;
+          result[3] += 0;
+          result[4] += 0;
+          result[5] += 0;
+          result[6] += 0;
+        } else {
+          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)87.5) ) ) {
+            result[0] += 1;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 0;
+            result[4] += 0;
+            result[5] += 0;
+            result[6] += 0;
+          } else {
+            if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)-0.5) ) ) {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)87) ) ) {
+                result[0] += 1;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0.7777777777777778;
+                result[3] += 0.2222222222222222;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            }
+          }
+        }
+      } else {
+        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)83.5) ) ) {
+          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)-13) ) ) {
+            if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)77.5) ) ) {
+              if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)26) ) ) {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0.9976076555023924;
+                result[4] += 0.0023923444976076554;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0.907608695652174;
+                result[1] += 0.09239130434782608;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            } else {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 1;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          } else {
+            if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)9.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 1;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)26.5) ) ) {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 1;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 1;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            }
+          }
+        } else {
+          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)19.5) ) ) {
+            result[0] += 0;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 0;
+            result[4] += 1;
+            result[5] += 0;
+            result[6] += 0;
+          } else {
+            result[0] += 0;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 1;
+            result[4] += 0;
+            result[5] += 0;
+            result[6] += 0;
+          }
+        }
+      }
+    } else {
+      if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)7.5) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 1;
+        result[5] += 0;
+        result[6] += 0;
+      } else {
+        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)21) ) ) {
+          result[0] += 0;
+          result[1] += 1;
+          result[2] += 0;
+          result[3] += 0;
+          result[4] += 0;
+          result[5] += 0;
+          result[6] += 0;
+        } else {
+          result[0] += 0;
+          result[1] += 0;
+          result[2] += 0;
+          result[3] += 1;
+          result[4] += 0;
+          result[5] += 0;
+          result[6] += 0;
+        }
+      }
+    }
+  } else {
+    if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)91.5) ) ) {
+      if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)23.5) ) ) {
+        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)5) ) ) {
+          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)4064.5) ) ) {
+            result[0] += 1;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 0;
+            result[4] += 0;
+            result[5] += 0;
+            result[6] += 0;
+          } else {
+            result[0] += 0;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 0;
+            result[4] += 1;
+            result[5] += 0;
+            result[6] += 0;
+          }
+        } else {
+          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)18) ) ) {
+            if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)-45) ) ) {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)82) ) ) {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0.1794871794871795;
+                result[3] += 0;
+                result[4] += 0.7948717948717948;
+                result[5] += 0.02564102564102564;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 1;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            }
+          } else {
+            if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)-0.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 1;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)0.5) ) ) {
+                result[0] += 0;
+                result[1] += 0.00684931506849315;
+                result[2] += 0.003424657534246575;
+                result[3] += 0.9897260273972602;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 1;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            }
+          }
+        }
+      } else {
+        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)33) ) ) {
+          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)47.5) ) ) {
+            if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)45) ) ) {
+              if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)81.5) ) ) {
+                result[0] += 0.9956577266922095;
+                result[1] += 0.00038314176245210735;
+                result[2] += 0.002171136653895275;
+                result[3] += 0.0016602809706257984;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0.00012771392081736913;
+              } else {
+                result[0] += 1;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            } else {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          } else {
+            if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)80.5) ) ) {
+              if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)31) ) ) {
+                result[0] += 0.9917695473251029;
+                result[1] += 0.00102880658436214;
+                result[2] += 0.004458161865569273;
+                result[3] += 0.0027434842249657062;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0.8953488372093024;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0.10465116279069768;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            } else {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          }
+        } else {
+          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)84.5) ) ) {
+            result[0] += 0;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 1;
+            result[4] += 0;
+            result[5] += 0;
+            result[6] += 0;
+          } else {
+            if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)89.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 1;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          }
+        }
+      }
+    } else {
+      if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)99.5) ) ) {
+        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)3) ) ) {
+          result[0] += 1;
+          result[1] += 0;
+          result[2] += 0;
+          result[3] += 0;
+          result[4] += 0;
+          result[5] += 0;
+          result[6] += 0;
+        } else {
+          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)15) ) ) {
+            if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)49) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 1;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          } else {
+            if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)48.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 1;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              result[0] += 1;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 0;
+              result[5] += 0;
+              result[6] += 0;
+            }
+          }
+        }
+      } else {
+        if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)39) ) ) {
+          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)71) ) ) {
+            if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)-0.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 1;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)30) ) ) {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 1;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 1;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            }
+          } else {
+            result[0] += 0;
+            result[1] += 0;
+            result[2] += 0;
+            result[3] += 0;
+            result[4] += 1;
+            result[5] += 0;
+            result[6] += 0;
+          }
+        } else {
+          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)39.5) ) ) {
+            if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)2.5) ) ) {
+              result[0] += 0;
+              result[1] += 0;
+              result[2] += 0;
+              result[3] += 0;
+              result[4] += 1;
+              result[5] += 0;
+              result[6] += 0;
+            } else {
+              if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)39) ) ) {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 1;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 1;
+                result[6] += 0;
+              }
+            }
+          } else {
+            if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)71.5) ) ) {
+              if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)51.5) ) ) {
+                result[0] += 0.996078431372549;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0.00392156862745098;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 1;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              }
+            } else {
+              if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)68.5) ) ) {
+                result[0] += 1;
+                result[1] += 0;
+                result[2] += 0;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0;
+              } else {
+                result[0] += 0.9665924276169265;
+                result[1] += 0;
+                result[2] += 0.028953229398663696;
+                result[3] += 0;
+                result[4] += 0;
+                result[5] += 0;
+                result[6] += 0.004454342984409799;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Average tree outputs
+  result[0] /= 1;
+  result[1] /= 1;
+  result[2] /= 1;
+  result[3] /= 1;
+  result[4] /= 1;
+  result[5] /= 1;
+  result[6] /= 1;
+  
+  // Apply base_scores
+  result[0] += 0;
+  result[1] += 0;
+  result[2] += 0;
+  result[3] += 0;
+  result[4] += 0;
+  result[5] += 0;
+  result[6] += 0;
+  
+  // Apply postprocessor
+  if (!pred_margin) { postprocess(result); }
+}
+
+void postprocess(float* result) {
+  // Do nothing
+}
+
+
+int main() {
+    float result[MAX_N_CLASS];
+    union Entry input[TEST_DATA_COLS];
+    char line[1024];
+    
+
+    FILE* file = fopen("./codegen/dataset_148/split_3/test_data.csv", "r");
+    if (file == NULL) {
+        printf("Error opening file\n");
+        return 1;
+    }
+
+    while (fgets(line, sizeof(line), file)) {
+        char *ptr = line;
+        for (int i = 0; i < TEST_DATA_COLS; i++) {
+            sscanf(ptr, "%f", &(input[i].fvalue));
+            input[i].missing = -1;
+            while (*ptr != ',' && *ptr != '\n' && *ptr != '\0') ptr++;  // Skip to next comma
+            if (*ptr == ',') ptr++;  // Move past the comma
+        }
+        predict(input, 0, result);
+        
+    }
+    
+
+    return 0;
+}

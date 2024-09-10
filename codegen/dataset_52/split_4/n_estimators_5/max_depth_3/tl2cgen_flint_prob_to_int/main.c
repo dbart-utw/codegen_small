@@ -1,0 +1,213 @@
+
+#include "header.h"
+
+
+static const int32_t num_class[] = {  2, };
+
+int32_t get_num_target(void) {
+  return N_TARGET;
+}
+void get_num_class(int32_t* out) {
+  for (int i = 0; i < N_TARGET; ++i) {
+    out[i] = num_class[i];
+  }
+}
+int32_t get_num_feature(void) {
+  return 34;
+}
+const char* get_threshold_type(void) {
+  return "float32";
+}
+const char* get_leaf_output_type(void) {
+  return "uint32";
+}
+
+
+void predict(union Entry* data, int pred_margin, uint32_t* result) {
+  unsigned int tmp;
+  if ( ( !(data[4].missing != -1) || ((*( ((int*)(data)) + 4 ))<=((int)(0x3e86afcd))) ) ) {
+    result[0] += 858993459;
+    result[1] += 0;
+  } else {
+    if ( ( !(data[0].missing != -1) || ((*( ((int*)(data)) + 0 ))<=((int)(0x3f000000))) ) ) {
+      result[0] += 858993459;
+      result[1] += 0;
+    } else {
+      if ( ( !(data[26].missing != -1) || ((*( ((int*)(data)) + 26 ))<=((int)(0x3f7fcc3a))) ) ) {
+        result[0] += 79048477;
+        result[1] += 779944981;
+      } else {
+        result[0] += 562788817;
+        result[1] += 296204641;
+      }
+    }
+  }
+  if ( ( !(data[4].missing != -1) || ((*( ((int*)(data)) + 4 ))<=((int)(0x3e86afcd))) ) ) {
+    if ( ( !(data[7].missing != -1) || ((*( ((int*)(data)) + 7 ))<=((int)(0x3f314de8))) ) ) {
+      if ( ( !(data[12].missing != -1) || ((*( ((int*)(data)) + 12 ))<=((int)(0x3ecb9431))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 763549741;
+        result[1] += 95443717;
+      }
+    } else {
+      if ( ( !(data[28].missing != -1) || ((*( ((int*)(data)) + 28 ))<=((int)(0x3e0d9a95))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 286331153;
+        result[1] += 572662306;
+      }
+    }
+  } else {
+    if ( ( !(data[31].missing != -1) || ((*( ((int*)(data)) + 31 ) ^ (0b1 << 31))>((int)(0x3f75ec81))) ) ) {
+      if ( ( !(data[22].missing != -1) || ((*( ((int*)(data)) + 22 ))<=((int)(0x3f59c0ec))) ) ) {
+        result[0] += 515396075;
+        result[1] += 343597383;
+      } else {
+        result[0] += 858993459;
+        result[1] += 0;
+      }
+    } else {
+      if ( ( !(data[13].missing != -1) || ((*( ((int*)(data)) + 13 ) ^ (0b1 << 31))>((int)(0x3f289cf6))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 82794550;
+        result[1] += 776198908;
+      }
+    }
+  }
+  if ( ( !(data[30].missing != -1) || ((*( ((int*)(data)) + 30 ))<=((int)(0x3dd6ddad))) ) ) {
+    if ( ( !(data[7].missing != -1) || ((*( ((int*)(data)) + 7 ))<=((int)(0x3da9f6a9))) ) ) {
+      if ( ( !(data[12].missing != -1) || ((*( ((int*)(data)) + 12 ))<=((int)(0x3e536502))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 644245094;
+        result[1] += 214748364;
+      }
+    } else {
+      if ( ( !(data[6].missing != -1) || ((*( ((int*)(data)) + 6 ))<=((int)(0x3d8e72da))) ) ) {
+        result[0] += 763549741;
+        result[1] += 95443717;
+      } else {
+        result[0] += 95443717;
+        result[1] += 763549741;
+      }
+    }
+  } else {
+    if ( ( !(data[0].missing != -1) || ((*( ((int*)(data)) + 0 ))<=((int)(0x3f000000))) ) ) {
+      result[0] += 858993459;
+      result[1] += 0;
+    } else {
+      if ( ( !(data[5].missing != -1) || ((*( ((int*)(data)) + 5 ) ^ (0b1 << 31))>((int)(0x3f647dd4))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 67977899;
+        result[1] += 791015559;
+      }
+    }
+  }
+  if ( ( !(data[4].missing != -1) || ((*( ((int*)(data)) + 4 ))<=((int)(0x3d530164))) ) ) {
+    result[0] += 858993459;
+    result[1] += 0;
+  } else {
+    if ( ( !(data[10].missing != -1) || ((*( ((int*)(data)) + 10 ))<=((int)(0x3f7fc504))) ) ) {
+      if ( ( !(data[28].missing != -1) || ((*( ((int*)(data)) + 28 ) ^ (0b1 << 31))>((int)(0x3f60850a))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 79641777;
+        result[1] += 779351681;
+      }
+    } else {
+      if ( ( !(data[11].missing != -1) || ((*( ((int*)(data)) + 11 ) ^ (0b1 << 31))>((int)(0x3ed68294))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 415641996;
+        result[1] += 443351462;
+      }
+    }
+  }
+  if ( ( !(data[14].missing != -1) || ((*( ((int*)(data)) + 14 ))<=((int)(0x3ec176de))) ) ) {
+    if ( ( !(data[10].missing != -1) || ((*( ((int*)(data)) + 10 ) ^ (0b1 << 31))>((int)(0x3c2d57bc))) ) ) {
+      if ( ( !(data[25].missing != -1) || ((*( ((int*)(data)) + 25 ))<=((int)(0x3df6872b))) ) ) {
+        result[0] += 47721858;
+        result[1] += 811271600;
+      } else {
+        result[0] += 858993459;
+        result[1] += 0;
+      }
+    } else {
+      if ( ( !(data[26].missing != -1) || ((*( ((int*)(data)) + 26 ) ^ (0b1 << 31))>((int)(0x3ebabc94))) ) ) {
+        result[0] += 122713351;
+        result[1] += 736280107;
+      } else {
+        result[0] += 817429259;
+        result[1] += 41564199;
+      }
+    }
+  } else {
+    if ( ( !(data[26].missing != -1) || ((*( ((int*)(data)) + 26 ))<=((int)(0x3f7fcc3a))) ) ) {
+      if ( ( !(data[2].missing != -1) || ((*( ((int*)(data)) + 2 ))<=((int)(0x3ed44c5a))) ) ) {
+        result[0] += 515396075;
+        result[1] += 343597383;
+      } else {
+        result[0] += 19671605;
+        result[1] += 839321853;
+      }
+    } else {
+      if ( ( !(data[27].missing != -1) || ((*( ((int*)(data)) + 27 ) ^ (0b1 << 31))>((int)(0x3ec4e1c5))) ) ) {
+        result[0] += 858993459;
+        result[1] += 0;
+      } else {
+        result[0] += 375809638;
+        result[1] += 483183820;
+      }
+    }
+  }
+  
+  // Apply base_scores
+  result[0] += 0;
+  result[1] += 0;
+  
+  // Apply postprocessor
+  if (!pred_margin) { postprocess(result); }
+}
+
+void postprocess(uint32_t* result) {
+  // Do nothing
+}
+
+
+int main() {
+    uint32_t result[MAX_N_CLASS];
+    union Entry input[TEST_DATA_COLS];
+    char line[1024];
+    
+
+    FILE* file = fopen("./codegen/dataset_52/split_4/test_data.csv", "r");
+    if (file == NULL) {
+        printf("Error opening file\n");
+        return 1;
+    }
+
+    while (fgets(line, sizeof(line), file)) {
+        char *ptr = line;
+        for (int i = 0; i < TEST_DATA_COLS; i++) {
+            sscanf(ptr, "%f", &(input[i].fvalue));
+            input[i].missing = -1;
+            while (*ptr != ',' && *ptr != '\n' && *ptr != '\0') ptr++;  // Skip to next comma
+            if (*ptr == ',') ptr++;  // Move past the comma
+        }
+        predict(input, 0, result);
+        
+    }
+    
+
+    return 0;
+}

@@ -1,0 +1,417 @@
+
+#include "header.h"
+
+
+static const int32_t num_class[] = {  6, };
+
+int32_t get_num_target(void) {
+  return N_TARGET;
+}
+void get_num_class(int32_t* out) {
+  for (int i = 0; i < N_TARGET; ++i) {
+    out[i] = num_class[i];
+  }
+}
+int32_t get_num_feature(void) {
+  return 36;
+}
+const char* get_threshold_type(void) {
+  return "float32";
+}
+const char* get_leaf_output_type(void) {
+  return "uint32";
+}
+
+
+void predict(union Entry* data, int pred_margin, uint32_t* result) {
+  unsigned int tmp;
+  if ( ( !(data[24].missing != -1) || ((*( ((int*)(data)) + 24 ))<=((int)(0x42a20000))) ) ) {
+    if ( ( !(data[11].missing != -1) || ((*( ((int*)(data)) + 11 ))<=((int)(0x42950000))) ) ) {
+      if ( ( !(data[13].missing != -1) || ((*( ((int*)(data)) + 13 ))<=((int)(0x42820000))) ) ) {
+        result[0] += 6049249;
+        result[1] += 69566371;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 713811465;
+        result[5] += 69566371;
+      } else {
+        result[0] += 47265190;
+        result[1] += 5480022;
+        result[2] += 7535030;
+        result[3] += 150015604;
+        result[4] += 61650248;
+        result[5] += 587047363;
+      }
+    } else {
+      if ( ( !(data[25].missing != -1) || ((*( ((int*)(data)) + 25 ))<=((int)(0x425e0000))) ) ) {
+        result[0] += 5324339;
+        result[1] += 775578804;
+        result[2] += 17747798;
+        result[3] += 1774779;
+        result[4] += 58567735;
+        result[5] += 0;
+      } else {
+        result[0] += 547484911;
+        result[1] += 30607812;
+        result[2] += 58747253;
+        result[3] += 64671346;
+        result[4] += 77013206;
+        result[5] += 80468927;
+      }
+    }
+  } else {
+    if ( ( !(data[20].missing != -1) || ((*( ((int*)(data)) + 20 ))<=((int)(0x42a70000))) ) ) {
+      if ( ( !(data[15].missing != -1) || ((*( ((int*)(data)) + 15 ))<=((int)(0x42a10000))) ) ) {
+        result[0] += 0;
+        result[1] += 59240928;
+        result[2] += 148102320;
+        result[3] += 340635337;
+        result[4] += 51835812;
+        result[5] += 259179060;
+      } else {
+        result[0] += 24403223;
+        result[1] += 19522578;
+        result[2] += 590558003;
+        result[3] += 175703207;
+        result[4] += 4880644;
+        result[5] += 43925801;
+      }
+    } else {
+      if ( ( !(data[30].missing != -1) || ((*( ((int*)(data)) + 30 ))<=((int)(0x42d10000))) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 632531547;
+        result[3] += 140562566;
+        result[4] += 15618062;
+        result[5] += 70281283;
+      } else {
+        result[0] += 1297573;
+        result[1] += 0;
+        result[2] += 826554128;
+        result[3] += 31141756;
+        result[4] += 0;
+        result[5] += 0;
+      }
+    }
+  }
+  if ( ( !(data[20].missing != -1) || ((*( ((int*)(data)) + 20 ))<=((int)(0x429d0000))) ) ) {
+    if ( ( !(data[23].missing != -1) || ((*( ((int*)(data)) + 23 ))<=((int)(0x42930000))) ) ) {
+      if ( ( !(data[17].missing != -1) || ((*( ((int*)(data)) + 17 ))<=((int)(0x427e0000))) ) ) {
+        result[0] += 3046076;
+        result[1] += 24368608;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 770657252;
+        result[5] += 60921521;
+      } else {
+        result[0] += 29178733;
+        result[1] += 4270058;
+        result[2] += 12098499;
+        result[3] += 146605345;
+        result[4] += 40565556;
+        result[5] += 626275264;
+      }
+    } else {
+      if ( ( !(data[29].missing != -1) || ((*( ((int*)(data)) + 29 ))<=((int)(0x424e0000))) ) ) {
+        result[0] += 1930322;
+        result[1] += 826177978;
+        result[2] += 0;
+        result[3] += 1930322;
+        result[4] += 28954835;
+        result[5] += 0;
+      } else {
+        result[0] += 576548354;
+        result[1] += 39213766;
+        result[2] += 27555619;
+        result[3] += 57230902;
+        result[4] += 110752395;
+        result[5] += 47692419;
+      }
+    }
+  } else {
+    if ( ( !(data[3].missing != -1) || ((*( ((int*)(data)) + 3 ))<=((int)(0x429d0000))) ) ) {
+      if ( ( !(data[17].missing != -1) || ((*( ((int*)(data)) + 17 ))<=((int)(0x42c10000))) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 52698985;
+        result[3] += 379432693;
+        result[4] += 42159188;
+        result[5] += 384702592;
+      } else {
+        result[0] += 31814572;
+        result[1] += 0;
+        result[2] += 540847733;
+        result[3] += 159072862;
+        result[4] += 0;
+        result[5] += 127258290;
+      }
+    } else {
+      if ( ( !(data[24].missing != -1) || ((*( ((int*)(data)) + 24 ))<=((int)(0x42af0000))) ) ) {
+        result[0] += 19822925;
+        result[1] += 8259552;
+        result[2] += 635985541;
+        result[3] += 145368123;
+        result[4] += 8259552;
+        result[5] += 41297762;
+      } else {
+        result[0] += 1608601;
+        result[1] += 0;
+        result[2] += 830038623;
+        result[3] += 27346233;
+        result[4] += 0;
+        result[5] += 0;
+      }
+    }
+  }
+  if ( ( !(data[16].missing != -1) || ((*( ((int*)(data)) + 16 ))<=((int)(0x42a20000))) ) ) {
+    if ( ( !(data[19].missing != -1) || ((*( ((int*)(data)) + 19 ))<=((int)(0x42970000))) ) ) {
+      if ( ( !(data[21].missing != -1) || ((*( ((int*)(data)) + 21 ))<=((int)(0x427a0000))) ) ) {
+        result[0] += 9761289;
+        result[1] += 9761289;
+        result[2] += 16268815;
+        result[3] += 0;
+        result[4] += 774395618;
+        result[5] += 48806446;
+      } else {
+        result[0] += 52443811;
+        result[1] += 6028024;
+        result[2] += 4822419;
+        result[3] += 151906211;
+        result[4] += 40387762;
+        result[5] += 603405229;
+      }
+    } else {
+      if ( ( !(data[29].missing != -1) || ((*( ((int*)(data)) + 29 ))<=((int)(0x427e0000))) ) ) {
+        result[0] += 11176494;
+        result[1] += 767984858;
+        result[2] += 3193284;
+        result[3] += 0;
+        result[4] += 73445537;
+        result[5] += 3193284;
+      } else {
+        result[0] += 607374798;
+        result[1] += 38840464;
+        result[2] += 49535664;
+        result[3] += 47284043;
+        result[4] += 68674444;
+        result[5] += 47284043;
+      }
+    }
+  } else {
+    if ( ( !(data[17].missing != -1) || ((*( ((int*)(data)) + 17 ))<=((int)(0x42c10000))) ) ) {
+      if ( ( !(data[35].missing != -1) || ((*( ((int*)(data)) + 35 ))<=((int)(0x42a40000))) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 130480019;
+        result[3] += 467553401;
+        result[4] += 32620004;
+        result[5] += 228340033;
+      } else {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 785365448;
+        result[3] += 73628010;
+        result[4] += 0;
+        result[5] += 0;
+      }
+    } else {
+      if ( ( !(data[20].missing != -1) || ((*( ((int*)(data)) + 20 ))<=((int)(0x42a50000))) ) ) {
+        result[0] += 85899345;
+        result[1] += 0;
+        result[2] += 544029190;
+        result[3] += 200431807;
+        result[4] += 0;
+        result[5] += 28633115;
+      } else {
+        result[0] += 4095320;
+        result[1] += 0;
+        result[2] += 804730463;
+        result[3] += 46072354;
+        result[4] += 0;
+        result[5] += 4095320;
+      }
+    }
+  }
+  if ( ( !(data[27].missing != -1) || ((*( ((int*)(data)) + 27 ))<=((int)(0x42930000))) ) ) {
+    if ( ( !(data[17].missing != -1) || ((*( ((int*)(data)) + 17 ))<=((int)(0x42760000))) ) ) {
+      if ( ( !(data[19].missing != -1) || ((*( ((int*)(data)) + 19 ))<=((int)(0x42a10000))) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 846544278;
+        result[5] += 12449180;
+      } else {
+        result[0] += 0;
+        result[1] += 773094113;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 85899345;
+        result[5] += 0;
+      }
+    } else {
+      if ( ( !(data[13].missing != -1) || ((*( ((int*)(data)) + 13 ))<=((int)(0x42a40000))) ) ) {
+        result[0] += 37620151;
+        result[1] += 15227204;
+        result[2] += 895717;
+        result[3] += 27767254;
+        result[4] += 44785894;
+        result[5] += 732697236;
+      } else {
+        result[0] += 14683648;
+        result[1] += 9789099;
+        result[2] += 19578198;
+        result[3] += 425825817;
+        result[4] += 22025473;
+        result[5] += 367091221;
+      }
+    }
+  } else {
+    if ( ( !(data[24].missing != -1) || ((*( ((int*)(data)) + 24 ))<=((int)(0x429f0000))) ) ) {
+      if ( ( !(data[29].missing != -1) || ((*( ((int*)(data)) + 29 ))<=((int)(0x42820000))) ) ) {
+        result[0] += 1542178;
+        result[1] += 687811638;
+        result[2] += 0;
+        result[3] += 7710892;
+        result[4] += 151133499;
+        result[5] += 10795249;
+      } else {
+        result[0] += 602783094;
+        result[1] += 15978710;
+        result[2] += 36916332;
+        result[3] += 85403454;
+        result[4] += 65567813;
+        result[5] += 52344052;
+      }
+    } else {
+      if ( ( !(data[17].missing != -1) || ((*( ((int*)(data)) + 17 ))<=((int)(0x42c10000))) ) ) {
+        result[0] += 27821650;
+        result[1] += 48687888;
+        result[2] += 222573203;
+        result[3] += 208662378;
+        result[4] += 41732475;
+        result[5] += 309515861;
+      } else {
+        result[0] += 18552774;
+        result[1] += 0;
+        result[2] += 777361251;
+        result[3] += 60296517;
+        result[4] += 0;
+        result[5] += 2782916;
+      }
+    }
+  }
+  if ( ( !(data[8].missing != -1) || ((*( ((int*)(data)) + 8 ))<=((int)(0x42a20000))) ) ) {
+    if ( ( !(data[18].missing != -1) || ((*( ((int*)(data)) + 18 ))<=((int)(0x42b30000))) ) ) {
+      if ( ( !(data[29].missing != -1) || ((*( ((int*)(data)) + 29 ))<=((int)(0x42820000))) ) ) {
+        result[0] += 5052902;
+        result[1] += 5052902;
+        result[2] += 0;
+        result[3] += 12632256;
+        result[4] += 762988307;
+        result[5] += 73267089;
+      } else {
+        result[0] += 67913470;
+        result[1] += 3731509;
+        result[2] += 746301;
+        result[3] += 73883885;
+        result[4] += 70898678;
+        result[5] += 641819613;
+      }
+    } else {
+      if ( ( !(data[9].missing != -1) || ((*( ((int*)(data)) + 9 ))<=((int)(0x426a0000))) ) ) {
+        result[0] += 15681422;
+        result[1] += 780586348;
+        result[2] += 13939041;
+        result[3] += 13939041;
+        result[4] += 33105224;
+        result[5] += 1742380;
+      } else {
+        result[0] += 517248615;
+        result[1] += 24863034;
+        result[2] += 61426319;
+        result[3] += 126752723;
+        result[4] += 53626152;
+        result[5] += 75076613;
+      }
+    }
+  } else {
+    if ( ( !(data[27].missing != -1) || ((*( ((int*)(data)) + 27 ))<=((int)(0x42970000))) ) ) {
+      if ( ( !(data[6].missing != -1) || ((*( ((int*)(data)) + 6 ))<=((int)(0x42d90000))) ) ) {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 31236125;
+        result[3] += 203034817;
+        result[4] += 93708377;
+        result[5] += 531014138;
+      } else {
+        result[0] += 0;
+        result[1] += 0;
+        result[2] += 486762960;
+        result[3] += 171798691;
+        result[4] += 28633115;
+        result[5] += 171798691;
+      }
+    } else {
+      if ( ( !(data[13].missing != -1) || ((*( ((int*)(data)) + 13 ))<=((int)(0x42560000))) ) ) {
+        result[0] += 0;
+        result[1] += 858993459;
+        result[2] += 0;
+        result[3] += 0;
+        result[4] += 0;
+        result[5] += 0;
+      } else {
+        result[0] += 9602569;
+        result[1] += 872960;
+        result[2] += 755984080;
+        result[3] += 69836866;
+        result[4] += 0;
+        result[5] += 22696981;
+      }
+    }
+  }
+  
+  // Apply base_scores
+  result[0] += 0;
+  result[1] += 0;
+  result[2] += 0;
+  result[3] += 0;
+  result[4] += 0;
+  result[5] += 0;
+  
+  // Apply postprocessor
+  if (!pred_margin) { postprocess(result); }
+}
+
+void postprocess(uint32_t* result) {
+  // Do nothing
+}
+
+
+int main() {
+    uint32_t result[MAX_N_CLASS];
+    union Entry input[TEST_DATA_COLS];
+    char line[1024];
+    
+
+    FILE* file = fopen("./codegen/dataset_146/split_3/test_data.csv", "r");
+    if (file == NULL) {
+        printf("Error opening file\n");
+        return 1;
+    }
+
+    while (fgets(line, sizeof(line), file)) {
+        char *ptr = line;
+        for (int i = 0; i < TEST_DATA_COLS; i++) {
+            sscanf(ptr, "%f", &(input[i].fvalue));
+            input[i].missing = -1;
+            while (*ptr != ',' && *ptr != '\n' && *ptr != '\0') ptr++;  // Skip to next comma
+            if (*ptr == ',') ptr++;  // Move past the comma
+        }
+        predict(input, 0, result);
+        
+    }
+    
+
+    return 0;
+}
