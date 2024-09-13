@@ -25,11 +25,11 @@ const char* get_leaf_output_type(void) {
 
 void predict(union Entry* data, int pred_margin, float* result) {
   unsigned int tmp;
-  if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)79.5) ) ) {
-    if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)48.5) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)74) ) ) {
+  if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)79.5) ) ) {
+    if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)62.5) ) ) {
+        if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)48.5) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)74) ) ) {
             result[0] += 0.5;
             result[1] += 0;
             result[2] += 0;
@@ -45,7 +45,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)62.5) ) ) {
+          if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)62.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -62,8 +62,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
             result[0] += 0.38461538461538464;
             result[1] += 0;
             result[2] += 0;
@@ -79,7 +79,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9329896907216495;
           }
         } else {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
             result[0] += 0.09649122807017543;
             result[1] += 0.013157894736842105;
             result[2] += 0.0043859649122807015;
@@ -97,9 +97,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)103.5) ) ) {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)65) ) ) {
+      if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)103.5) ) ) {
+        if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)71.5) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)65) ) ) {
             result[0] += 0.023255813953488375;
             result[1] += 0.48837209302325585;
             result[2] += 0;
@@ -115,7 +115,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.05333333333333334;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)89) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)89) ) ) {
             result[0] += 0.019933554817275746;
             result[1] += 0;
             result[2] += 0.2059800664451827;
@@ -132,8 +132,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)99.5) ) ) {
+        if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)99.5) ) ) {
             result[0] += 0.029411764705882353;
             result[1] += 0.8235294117647058;
             result[2] += 0;
@@ -159,10 +159,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)89.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)91) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
+      if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
+        if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)89.5) ) ) {
+          if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)91) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -178,7 +178,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)69.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)69.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -195,8 +195,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)117) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
+        if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)117) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -221,9 +221,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)72.5) ) ) {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)93.5) ) ) {
+      if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
+        if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)72.5) ) ) {
+          if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)93.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.25;
@@ -239,7 +239,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)85.5) ) ) {
+          if ( LIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)85.5) ) ) {
             result[0] += 0.011049723756906077;
             result[1] += 0;
             result[2] += 0.7071823204419889;
@@ -256,8 +256,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)89.5) ) ) {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)90.5) ) ) {
+        if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)89.5) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)90.5) ) ) {
             result[0] += 0.012500000000000002;
             result[1] += 0;
             result[2] += 0.8656250000000001;
@@ -273,7 +273,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)94) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)94) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3333333333333333;
@@ -292,11 +292,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
-    if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)64.5) ) ) {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)61.5) ) ) {
+  if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)64.5) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)61.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -312,7 +312,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.1794871794871795;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)59.5) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)59.5) ) ) {
             result[0] += 0.9047619047619048;
             result[1] += 0;
             result[2] += 0;
@@ -329,8 +329,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)86.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)60.5) ) ) {
+        if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)60.5) ) ) {
             result[0] += 0;
             result[1] += 0.07142857142857144;
             result[2] += 0;
@@ -346,7 +346,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9017857142857143;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)83.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0.012121212121212121;
             result[2] += 0.012121212121212121;
@@ -364,9 +364,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)102.5) ) ) {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)65) ) ) {
+      if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)102.5) ) ) {
+        if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)65) ) ) {
             result[0] += 0.075;
             result[1] += 0.35;
             result[2] += 0;
@@ -382,7 +382,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.03231017770597738;
           }
         } else {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)101.5) ) ) {
+          if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)101.5) ) ) {
             result[0] += 0.031088082901554407;
             result[1] += 0.015544041450777204;
             result[2] += 0.07772020725388602;
@@ -399,7 +399,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)99) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)99) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -417,10 +417,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
+    if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)96.5) ) ) {
+      if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.2;
@@ -436,7 +436,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)84) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)84) ) ) {
             result[0] += 0;
             result[1] += 0.23333333333333334;
             result[2] += 0.43333333333333335;
@@ -453,8 +453,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)121) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)121) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.25;
@@ -470,7 +470,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)122.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)122.5) ) ) {
             result[0] += 0.03076923076923077;
             result[1] += 0;
             result[2] += 0.9230769230769231;
@@ -488,9 +488,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)84.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)107.5) ) ) {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)109.5) ) ) {
+      if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)84.5) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)107.5) ) ) {
+          if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)109.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.6029411764705882;
@@ -506,7 +506,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)77) ) ) {
+          if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)77) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -523,8 +523,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)105.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)105.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -540,7 +540,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)84.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9150943396226415;
@@ -559,11 +559,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)78.5) ) ) {
-    if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)93) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)67.5) ) ) {
+  if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)78.5) ) ) {
+    if ( UNLIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
+        if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)93) ) ) {
+          if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)67.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.019685039370078743;
@@ -579,7 +579,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.75;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)63.5) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)63.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -596,8 +596,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)65.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)59) ) ) {
+        if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)65.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)59) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -613,7 +613,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9598278335724534;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)83.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)83.5) ) ) {
             result[0] += 0.07901907356948229;
             result[1] += 0.010899182561307902;
             result[2] += 0.021798365122615803;
@@ -631,9 +631,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)58.5) ) ) {
-        if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)88.5) ) ) {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)100) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)58.5) ) ) {
+        if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)88.5) ) ) {
+          if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)100) ) ) {
             result[0] += 0;
             result[1] += 0.019230769230769232;
             result[2] += 0;
@@ -649,7 +649,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)95) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)95) ) ) {
             result[0] += 0;
             result[1] += 0.6111111111111112;
             result[2] += 0;
@@ -666,8 +666,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)73.5) ) ) {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)73.5) ) ) {
+          if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)58) ) ) {
             result[0] += 0.95;
             result[1] += 0;
             result[2] += 0;
@@ -683,7 +683,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.5821596244131455;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)70.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)70.5) ) ) {
             result[0] += 0.20202020202020202;
             result[1] += 0.24242424242424243;
             result[2] += 0;
@@ -702,9 +702,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)83.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)66) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+      if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)83.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)66) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -712,7 +712,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 1;
           result[5] += 0;
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)67.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)67.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -729,8 +729,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)82.5) ) ) {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)97.5) ) ) {
+        if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)82.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)97.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -746,7 +746,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.532258064516129;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 1;
@@ -764,9 +764,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)105.5) ) ) {
-        if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)102.5) ) ) {
+      if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)105.5) ) ) {
+        if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -782,7 +782,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)100.5) ) ) {
+          if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)100.5) ) ) {
             result[0] += 0.0035335689045936395;
             result[1] += 0.0035335689045936395;
             result[2] += 0.7773851590106007;
@@ -799,8 +799,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)76) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)59) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)76) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)59) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -816,7 +816,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)130.5) ) ) {
+          if ( LIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)130.5) ) ) {
             result[0] += 0.010101010101010104;
             result[1] += 0;
             result[2] += 0.9307359307359309;
@@ -835,11 +835,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
-    if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)63.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)62.5) ) ) {
+  if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)62.5) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)63.5) ) ) {
+          if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)62.5) ) ) {
             result[0] += 0.005780346820809248;
             result[1] += 0.005780346820809248;
             result[2] += 0;
@@ -855,7 +855,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.45454545454545453;
           }
         } else {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)102.5) ) ) {
+          if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0.1724137931034483;
             result[2] += 0;
@@ -872,8 +872,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
             result[0] += 0.4166666666666667;
             result[1] += 0;
             result[2] += 0;
@@ -889,7 +889,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9333333333333333;
           }
         } else {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)56.5) ) ) {
+          if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)56.5) ) ) {
             result[0] += 0.9166666666666666;
             result[1] += 0.027777777777777776;
             result[2] += 0;
@@ -907,9 +907,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)50) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)47) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)83.5) ) ) {
+      if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)50) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)47) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -925,7 +925,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)97) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)97) ) ) {
             result[0] += 0.05263157894736842;
             result[1] += 0.15789473684210525;
             result[2] += 0;
@@ -942,8 +942,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)73) ) ) {
-          if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)107.5) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)73) ) ) {
+          if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)107.5) ) ) {
             result[0] += 0.7776061776061777;
             result[1] += 0.012355212355212357;
             result[2] += 0.01003861003861004;
@@ -959,7 +959,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.012345679012345678;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
             result[0] += 0.006968641114982578;
             result[1] += 0.003484320557491289;
             result[2] += 0.1672473867595819;
@@ -978,9 +978,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
-      if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)90.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)91) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+      if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)90.5) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)91) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -996,7 +996,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)52) ) ) {
+        if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)52) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -1004,7 +1004,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)89.5) ) ) {
+          if ( UNLIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)89.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.08333333333333333;
@@ -1022,9 +1022,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)77) ) ) {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)90.5) ) ) {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)71.5) ) ) {
+      if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)77) ) ) {
+        if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)90.5) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)71.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3076923076923077;
@@ -1048,8 +1048,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)107.5) ) ) {
+        if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)107.5) ) ) {
             result[0] += 0.05555555555555555;
             result[1] += 0.2222222222222222;
             result[2] += 0.2777777777777778;
@@ -1065,7 +1065,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)82) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)82) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.7555555555555555;
@@ -1084,11 +1084,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)81) ) ) {
-    if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)93.5) ) ) {
-      if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)63.5) ) ) {
+  if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)93.5) ) ) {
+      if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)71.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)63.5) ) ) {
             result[0] += 0.015;
             result[1] += 0.025;
             result[2] += 0;
@@ -1104,7 +1104,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.42857142857142855;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
             result[0] += 0.045454545454545456;
             result[1] += 0.21212121212121213;
             result[2] += 0;
@@ -1121,8 +1121,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)65.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+        if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)65.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1138,7 +1138,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9380403458213257;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)74) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)74) ) ) {
             result[0] += 0;
             result[1] += 0.05263157894736842;
             result[2] += 0;
@@ -1156,9 +1156,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)54) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)91.5) ) ) {
+      if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)54) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1174,7 +1174,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)81.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)81.5) ) ) {
             result[0] += 0.03125;
             result[1] += 0.03125;
             result[2] += 0;
@@ -1191,8 +1191,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)73) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)76) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)76) ) ) {
             result[0] += 0.4140625;
             result[1] += 0.28125;
             result[2] += 0;
@@ -1208,7 +1208,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.004733727810650888;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
             result[0] += 0.0045045045045045045;
             result[1] += 0.04504504504504504;
             result[2] += 0.14864864864864866;
@@ -1227,9 +1227,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)88.5) ) ) {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)52) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)88.5) ) ) {
+        if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)52) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -1237,7 +1237,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 1;
           result[5] += 0;
         } else {
-          if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)75) ) ) {
+          if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)75) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.017857142857142856;
@@ -1254,8 +1254,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)93) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)100.5) ) ) {
+        if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)93) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0.02564102564102564;
             result[2] += 0;
@@ -1271,7 +1271,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.375;
           }
         } else {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)95.5) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)95.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.4230769230769231;
@@ -1289,9 +1289,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)77) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)112) ) ) {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)95) ) ) {
+      if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)77) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)112) ) ) {
+          if ( LIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)95) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -1315,8 +1315,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
             result[0] += 0.03932584269662921;
             result[1] += 0;
             result[2] += 0.6741573033707865;
@@ -1332,7 +1332,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)87.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.925531914893617;
@@ -1351,10 +1351,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)79.5) ) ) {
-    if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)48.5) ) ) {
-      if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)88) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)38.5) ) ) {
+  if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)79.5) ) ) {
+    if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)48.5) ) ) {
+      if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)88) ) ) {
+        if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)38.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -1378,9 +1378,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         result[5] += 0;
       }
     } else {
-      if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)73.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)60.5) ) ) {
+      if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)73.5) ) ) {
+        if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)60.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1396,7 +1396,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.14084507042253522;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
             result[0] += 0;
             result[1] += 0.005387931034482759;
             result[2] += 0;
@@ -1413,8 +1413,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)67.5) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)45.5) ) ) {
+        if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)67.5) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)45.5) ) ) {
             result[0] += 0.026315789473684213;
             result[1] += 0.9473684210526316;
             result[2] += 0;
@@ -1430,7 +1430,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.04790419161676647;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
             result[0] += 0.4794520547945205;
             result[1] += 0.0228310502283105;
             result[2] += 0.0639269406392694;
@@ -1449,10 +1449,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)78.5) ) ) {
-      if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)82) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)73.5) ) ) {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)74) ) ) {
+    if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)78.5) ) ) {
+      if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)82) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)73.5) ) ) {
+          if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)74) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1468,7 +1468,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.85;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)87.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1485,8 +1485,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)97.5) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)64.5) ) ) {
+        if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)97.5) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)64.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8888888888888888;
@@ -1502,7 +1502,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.5416666666666666;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1520,9 +1520,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)93) ) ) {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)58) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)93) ) ) {
+        if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -1538,7 +1538,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)59) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)59) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -1555,8 +1555,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
+        if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.6938775510204082;
@@ -1572,7 +1572,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.002710027100271003;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)96) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)96) ) ) {
             result[0] += 0.5;
             result[1] += 0;
             result[2] += 0.5;
@@ -1591,11 +1591,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
-    if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)90.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)107) ) ) {
+  if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)90.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
+          if ( LIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)107) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1611,7 +1611,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)76) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)76) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1628,8 +1628,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
+          if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
             result[0] += 0.9615384615384616;
             result[1] += 0;
             result[2] += 0;
@@ -1645,7 +1645,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.14893617021276598;
           }
         } else {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
             result[0] += 0.00536480686695279;
             result[1] += 0.001072961373390558;
             result[2] += 0;
@@ -1663,9 +1663,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)56.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)47) ) ) {
+      if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)56.5) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)47) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -1681,7 +1681,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)55.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -1698,8 +1698,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)73) ) ) {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
             result[0] += 0.03333333333333334;
             result[1] += 0.13333333333333336;
             result[2] += 0;
@@ -1715,7 +1715,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.01568265682656827;
           }
         } else {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)82) ) ) {
+          if ( LIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)82) ) ) {
             result[0] += 0.017605633802816902;
             result[1] += 0;
             result[2] += 0.07746478873239436;
@@ -1734,10 +1734,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)101.5) ) ) {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
-        if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)84) ) ) {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)77) ) ) {
+    if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)101.5) ) ) {
+      if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
+        if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)77) ) ) {
             result[0] += 0.05405405405405406;
             result[1] += 0;
             result[2] += 0.05405405405405406;
@@ -1753,7 +1753,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.3;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)93.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)93.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -1770,8 +1770,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)79.5) ) ) {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)75) ) ) {
+        if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)79.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)75) ) ) {
             result[0] += 0;
             result[1] += 0.21052631578947367;
             result[2] += 0.3684210526315789;
@@ -1787,7 +1787,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)97.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)97.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5555555555555556;
@@ -1805,9 +1805,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)112.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)84) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)74.5) ) ) {
+      if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)112.5) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)84) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)74.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -1823,7 +1823,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.009615384615384616;
           }
         } else {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)87.5) ) ) {
             result[0] += 0.017543859649122806;
             result[1] += 0;
             result[2] += 0.8596491228070176;
@@ -1849,10 +1849,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)72.5) ) ) {
-    if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)63.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)44.5) ) ) {
+  if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)72.5) ) ) {
+    if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
+      if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)63.5) ) ) {
+        if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)44.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -1860,7 +1860,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)58.5) ) ) {
+          if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)58.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1877,8 +1877,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)66.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)55.5) ) ) {
+        if ( LIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)55.5) ) ) {
             result[0] += 0;
             result[1] += 0.5;
             result[2] += 0;
@@ -1894,7 +1894,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8181818181818182;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)75) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)75) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1912,9 +1912,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)86.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)55.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)68.5) ) ) {
+      if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)86.5) ) ) {
+        if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)68.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -1930,7 +1930,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
             result[0] += 0.6000000000000001;
             result[1] += 0;
             result[2] += 0;
@@ -1947,8 +1947,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)59.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -1964,7 +1964,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.736318407960199;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0.015873015873015872;
             result[2] += 0.015873015873015872;
@@ -1983,10 +1983,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)77) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)45.5) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)87) ) ) {
+    if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)77) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)45.5) ) ) {
+          if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)87) ) ) {
             result[0] += 0;
             result[1] += 0.9090909090909091;
             result[2] += 0;
@@ -2002,7 +2002,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)99.5) ) ) {
+          if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)99.5) ) ) {
             result[0] += 0.0234375;
             result[1] += 0.0703125;
             result[2] += 0;
@@ -2019,8 +2019,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)72.5) ) ) {
+        if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)72.5) ) ) {
             result[0] += 0.29411764705882354;
             result[1] += 0.047058823529411764;
             result[2] += 0;
@@ -2036,7 +2036,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.010251630941286114;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)95.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)95.5) ) ) {
             result[0] += 0.12380952380952381;
             result[1] += 0.04285714285714286;
             result[2] += 0.11904761904761904;
@@ -2054,9 +2054,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)104.5) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)84) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)104.5) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)84) ) ) {
             result[0] += 0;
             result[1] += 0.04;
             result[2] += 0.04;
@@ -2072,7 +2072,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.13020833333333334;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)77) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)77) ) ) {
             result[0] += 0.2608695652173913;
             result[1] += 0;
             result[2] += 0.043478260869565216;
@@ -2089,8 +2089,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)98.5) ) ) {
+        if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)98.5) ) ) {
             result[0] += 0.014457831325301205;
             result[1] += 0;
             result[2] += 0.8024096385542169;
@@ -2106,7 +2106,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)75.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2125,10 +2125,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)75.5) ) ) {
-    if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)35.5) ) ) {
+  if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)75.5) ) ) {
+    if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
+      if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
+        if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)35.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -2136,7 +2136,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)61.5) ) ) {
+          if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)61.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2153,8 +2153,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)64) ) ) {
+        if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)64) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2170,7 +2170,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.3333333333333333;
           }
         } else {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)55.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -2188,9 +2188,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)52) ) ) {
+      if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)52) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -2206,7 +2206,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)75.5) ) ) {
             result[0] += 0;
             result[1] += 0.6666666666666666;
             result[2] += 0;
@@ -2223,8 +2223,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)50.5) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)50.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2240,7 +2240,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8909691629955947;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
             result[0] += 0.04516129032258064;
             result[1] += 0.03225806451612903;
             result[2] += 0.01935483870967742;
@@ -2259,9 +2259,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)50) ) ) {
-      if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)94.5) ) ) {
+    if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)50) ) ) {
+      if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)94.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -2277,7 +2277,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)63.5) ) ) {
+        if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)63.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -2285,7 +2285,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)98) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)98) ) ) {
             result[0] += 0;
             result[1] += 0.8;
             result[2] += 0;
@@ -2303,9 +2303,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)77) ) ) {
-        if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)68.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)99.5) ) ) {
+      if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)77) ) ) {
+        if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)68.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)99.5) ) ) {
             result[0] += 0.07352941176470588;
             result[1] += 0.08088235294117647;
             result[2] += 0.007352941176470588;
@@ -2321,7 +2321,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)74.5) ) ) {
+          if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)74.5) ) ) {
             result[0] += 0.896709323583181;
             result[1] += 0.018281535648994516;
             result[2] += 0.002742230347349177;
@@ -2338,8 +2338,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)91.5) ) ) {
+        if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0.00819672131147541;
             result[2] += 0.14754098360655737;
@@ -2355,7 +2355,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.16666666666666666;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
             result[0] += 0.20588235294117646;
             result[1] += 0;
             result[2] += 0.6176470588235294;
@@ -2374,10 +2374,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
-      if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)89.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)41) ) ) {
+  if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+      if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)89.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)41) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -2385,7 +2385,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
             result[0] += 0;
             result[1] += 0.010380622837370242;
             result[2] += 0;
@@ -2402,8 +2402,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)56.5) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)56.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)59.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -2419,7 +2419,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)52) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)52) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -2437,9 +2437,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)72.5) ) ) {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
+      if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)72.5) ) ) {
+        if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
             result[0] += 0;
             result[1] += 0.07692307692307693;
             result[2] += 0;
@@ -2455,7 +2455,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9428191489361702;
           }
         } else {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)55.5) ) ) {
             result[0] += 0.9090909090909091;
             result[1] += 0;
             result[2] += 0;
@@ -2472,8 +2472,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)71.5) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
             result[0] += 0.03773584905660377;
             result[1] += 0.2830188679245283;
             result[2] += 0.018867924528301886;
@@ -2489,7 +2489,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.044751830756712775;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
             result[0] += 0.02127659574468085;
             result[1] += 0.0121580547112462;
             result[2] += 0.21580547112462006;
@@ -2508,10 +2508,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
-      if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)75.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)103) ) ) {
+    if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
+      if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)75.5) ) ) {
+        if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)103) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2527,7 +2527,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)69) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)69) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8;
@@ -2544,8 +2544,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)97.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)86.5) ) ) {
+        if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)97.5) ) ) {
+          if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)86.5) ) ) {
             result[0] += 0.024390243902439025;
             result[1] += 0;
             result[2] += 0.6536585365853659;
@@ -2561,7 +2561,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.005376344086021506;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)85) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)85) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3333333333333333;
@@ -2579,8 +2579,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)90.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)90) ) ) {
+      if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)90.5) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)90) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -2596,8 +2596,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)86.5) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)101.5) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)101.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5714285714285714;
@@ -2613,7 +2613,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.007194244604316548;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)82) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)82) ) ) {
             result[0] += 0.02127659574468085;
             result[1] += 0;
             result[2] += 0.8936170212765957;
@@ -2632,11 +2632,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
-    if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)91.5) ) ) {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)63.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)88.5) ) ) {
+  if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)91.5) ) ) {
+      if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)63.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)88.5) ) ) {
             result[0] += 0.011494252873563218;
             result[1] += 0.011494252873563218;
             result[2] += 0;
@@ -2652,7 +2652,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)58) ) ) {
+          if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)58) ) ) {
             result[0] += 0.991869918699187;
             result[1] += 0;
             result[2] += 0;
@@ -2669,8 +2669,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2686,7 +2686,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.7028301886792453;
           }
         } else {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
             result[0] += 0;
             result[1] += 0.010638297872340425;
             result[2] += 0;
@@ -2704,9 +2704,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)54) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)94.5) ) ) {
+      if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)54) ) ) {
+          if ( LIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)94.5) ) ) {
             result[0] += 0;
             result[1] += 0.9951690821256038;
             result[2] += 0;
@@ -2722,7 +2722,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)95.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)95.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2739,8 +2739,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)73) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)71.5) ) ) {
+        if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)71.5) ) ) {
             result[0] += 0.02531645569620253;
             result[1] += 0.45569620253164556;
             result[2] += 0;
@@ -2756,7 +2756,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.03859060402684564;
           }
         } else {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)111.5) ) ) {
+          if ( LIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)111.5) ) ) {
             result[0] += 0.016666666666666666;
             result[1] += 0.016666666666666666;
             result[2] += 0.22666666666666666;
@@ -2775,10 +2775,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)103) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)100.5) ) ) {
+    if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
+      if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)103) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.04878048780487805;
@@ -2794,7 +2794,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.2;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)118.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)118.5) ) ) {
             result[0] += 0.02097902097902098;
             result[1] += 0;
             result[2] += 0.7132867132867133;
@@ -2811,8 +2811,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)103.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)97) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)103.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)97) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2828,7 +2828,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)87.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.4583333333333333;
@@ -2846,7 +2846,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)75) ) ) {
+      if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)75) ) ) {
         result[0] += 0;
         result[1] += 0;
         result[2] += 0;
@@ -2854,8 +2854,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         result[4] += 0;
         result[5] += 0;
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)98) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)98.5) ) ) {
+        if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)98) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)98.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2871,7 +2871,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)67) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)67) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.42857142857142855;
@@ -2890,11 +2890,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
-      if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)93.5) ) ) {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)93) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
+  if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+      if ( LIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)93.5) ) ) {
+        if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)93) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2918,7 +2918,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)52.5) ) ) {
+        if ( LIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)52.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -2935,9 +2935,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)66.5) ) ) {
-        if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)73) ) ) {
+      if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)66.5) ) ) {
+        if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
+          if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)73) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2953,7 +2953,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)71.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)71.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -2970,8 +2970,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)82) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)82) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
             result[0] += 0.7777777777777778;
             result[1] += 0;
             result[2] += 0;
@@ -2987,7 +2987,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.6792452830188679;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)86) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)86) ) ) {
             result[0] += 0.02127659574468085;
             result[1] += 0.047872340425531915;
             result[2] += 0.047872340425531915;
@@ -3006,10 +3006,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
-      if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)91) ) ) {
-        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)88) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
+      if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)91) ) ) {
+        if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
+          if ( LIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)88) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3041,9 +3041,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         result[5] += 0;
       }
     } else {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)93) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)58) ) ) {
+      if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)93) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)58) ) ) {
             result[0] += 0.8163265306122449;
             result[1] += 0.04664723032069971;
             result[2] += 0;
@@ -3059,7 +3059,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.21875;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)75.5) ) ) {
             result[0] += 0.990909090909091;
             result[1] += 0;
             result[2] += 0.0015151515151515152;
@@ -3076,8 +3076,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
+        if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.15789473684210525;
@@ -3093,7 +3093,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.0547945205479452;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8214285714285714;
@@ -3112,11 +3112,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
-    if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)90.5) ) ) {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)42.5) ) ) {
+  if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
+    if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)90.5) ) ) {
+      if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)42.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -3132,7 +3132,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.019455252918287938;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)56.5) ) ) {
+          if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)56.5) ) ) {
             result[0] += 0.8881578947368421;
             result[1] += 0.05263157894736842;
             result[2] += 0;
@@ -3149,8 +3149,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)67.5) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)67.5) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)59.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3166,7 +3166,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9527896995708155;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)103) ) ) {
             result[0] += 0.013477088948787063;
             result[1] += 0.02425876010781671;
             result[2] += 0.008086253369272238;
@@ -3184,9 +3184,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)66.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)56.5) ) ) {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)95) ) ) {
+      if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)66.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)56.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)95) ) ) {
             result[0] += 0;
             result[1] += 0.42857142857142855;
             result[2] += 0;
@@ -3202,7 +3202,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)80) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)80) ) ) {
             result[0] += 0;
             result[1] += 0.12244897959183673;
             result[2] += 0;
@@ -3219,8 +3219,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -3236,7 +3236,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.3470319634703196;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
+          if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
             result[0] += 0.9006951340615691;
             result[1] += 0.017874875868917582;
             result[2] += 0.00496524329692155;
@@ -3255,10 +3255,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)80.5) ) ) {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)94.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)83.5) ) ) {
+    if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)80.5) ) ) {
+      if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)94.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3274,7 +3274,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.09090909090909091;
           }
         } else {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)100.5) ) ) {
+          if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0.017241379310344827;
             result[2] += 0.034482758620689655;
@@ -3291,8 +3291,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)99) ) ) {
+        if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)99) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.08695652173913043;
@@ -3308,7 +3308,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.20689655172413793;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)96) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)96) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.45;
@@ -3326,9 +3326,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)91.5) ) ) {
+      if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0.041666666666666664;
             result[2] += 0.3333333333333333;
@@ -3344,7 +3344,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)88.5) ) ) {
+          if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)88.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3333333333333333;
@@ -3361,7 +3361,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)75.5) ) ) {
+        if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)75.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -3369,7 +3369,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 1;
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)87.5) ) ) {
             result[0] += 0.01020408163265306;
             result[1] += 0;
             result[2] += 0.8673469387755102;
@@ -3388,11 +3388,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
-    if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)88.5) ) ) {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)65) ) ) {
+  if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)88.5) ) ) {
+      if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)65) ) ) {
             result[0] += 0.00398406374501992;
             result[1] += 0;
             result[2] += 0;
@@ -3408,7 +3408,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.375;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)69.5) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)69.5) ) ) {
             result[0] += 0.06818181818181818;
             result[1] += 0.1590909090909091;
             result[2] += 0;
@@ -3425,8 +3425,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)70.5) ) ) {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
+        if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)70.5) ) ) {
+          if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)66.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3442,7 +3442,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.6906077348066298;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)70.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)70.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3460,9 +3460,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)58.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)91) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)91.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)58.5) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)91) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3478,7 +3478,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)54.5) ) ) {
+          if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)54.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -3495,8 +3495,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)69.5) ) ) {
+        if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)69.5) ) ) {
             result[0] += 0.08888888888888889;
             result[1] += 0.4222222222222222;
             result[2] += 0;
@@ -3512,7 +3512,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.0448943661971831;
           }
         } else {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)103) ) ) {
+          if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)103) ) ) {
             result[0] += 0.011940298507462687;
             result[1] += 0.014925373134328358;
             result[2] += 0.0626865671641791;
@@ -3531,10 +3531,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)95.5) ) ) {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)63.5) ) ) {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)100.5) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+      if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)95.5) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)63.5) ) ) {
+          if ( UNLIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.4166666666666667;
@@ -3550,7 +3550,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)87.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.14285714285714285;
@@ -3567,8 +3567,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)100) ) ) {
+        if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)100) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3584,7 +3584,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)75.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3602,9 +3602,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)84) ) ) {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)98) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
+        if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)84) ) ) {
+          if ( UNLIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)98) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3620,7 +3620,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.018867924528301886;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)98.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)98.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3637,8 +3637,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)97.5) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)97.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8819188191881919;
@@ -3654,7 +3654,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.7333333333333333;
@@ -3673,11 +3673,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
-    if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)61.5) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
+  if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
+        if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)61.5) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3693,7 +3693,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.21428571428571427;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)55.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3710,8 +3710,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)57.5) ) ) {
+        if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)57.5) ) ) {
             result[0] += 0.6363636363636364;
             result[1] += 0;
             result[2] += 0;
@@ -3727,7 +3727,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9700854700854701;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)84.5) ) ) {
             result[0] += 0.08401084010840108;
             result[1] += 0.0948509485094851;
             result[2] += 0.037940379403794036;
@@ -3745,9 +3745,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
-        if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)81) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
+        if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)81) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -3763,7 +3763,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)90.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)90.5) ) ) {
             result[0] += 0;
             result[1] += 0.5454545454545454;
             result[2] += 0;
@@ -3780,8 +3780,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)67.5) ) ) {
+        if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)67.5) ) ) {
             result[0] += 0.19480519480519481;
             result[1] += 0.09740259740259741;
             result[2] += 0;
@@ -3797,7 +3797,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.030848329048843187;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
             result[0] += 0.03017241379310345;
             result[1] += 0.017241379310344827;
             result[2] += 0.1206896551724138;
@@ -3816,10 +3816,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)88.5) ) ) {
-        if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)93.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)88.5) ) ) {
+        if ( LIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)93.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
             result[0] += 0;
             result[1] += 0.29411764705882354;
             result[2] += 0;
@@ -3843,8 +3843,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)80.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)82) ) ) {
+        if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)80.5) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)82) ) ) {
             result[0] += 0;
             result[1] += 0.04;
             result[2] += 0.36;
@@ -3860,7 +3860,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.15151515151515152;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)71) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)71) ) ) {
             result[0] += 0.3;
             result[1] += 0.5;
             result[2] += 0;
@@ -3878,9 +3878,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)89.5) ) ) {
+      if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)89.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8125;
@@ -3896,7 +3896,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)86.5) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)86.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.7920792079207921;
@@ -3913,8 +3913,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)127.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)84.5) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)127.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)84.5) ) ) {
             result[0] += 0.018292682926829267;
             result[1] += 0;
             result[2] += 0.9085365853658537;
@@ -3930,7 +3930,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)116.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)116.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -3949,10 +3949,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
-    if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)38.5) ) ) {
+  if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+        if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)38.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -3960,7 +3960,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)109.5) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)109.5) ) ) {
             result[0] += 0;
             result[1] += 0.004032258064516129;
             result[2] += 0;
@@ -3977,8 +3977,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)83.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)55.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)55.5) ) ) {
             result[0] += 0.85;
             result[1] += 0;
             result[2] += 0;
@@ -3994,7 +3994,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8855359001040582;
           }
         } else {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)85.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.015384615384615385;
@@ -4012,9 +4012,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)53.5) ) ) {
-        if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)88) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)41.5) ) ) {
+      if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)53.5) ) ) {
+        if ( UNLIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)88) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)41.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -4030,7 +4030,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
             result[0] += 0.0044943820224719105;
             result[1] += 0.9955056179775281;
             result[2] += 0;
@@ -4047,8 +4047,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)73) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)69.5) ) ) {
+        if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)69.5) ) ) {
             result[0] += 0.20987654320987653;
             result[1] += 0.15432098765432098;
             result[2] += 0;
@@ -4064,7 +4064,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.07323026851098453;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
             result[0] += 0.019305019305019305;
             result[1] += 0.03474903474903475;
             result[2] += 0.06563706563706563;
@@ -4083,10 +4083,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
-      if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)74.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)63.5) ) ) {
+    if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
+      if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)74.5) ) ) {
+        if ( LIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)63.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4102,7 +4102,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.96875;
           }
         } else {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)66.5) ) ) {
             result[0] += 0;
             result[1] += 0.25;
             result[2] += 0;
@@ -4119,8 +4119,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)99.5) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)86) ) ) {
+        if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)99.5) ) ) {
+          if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)86) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.1;
@@ -4136,7 +4136,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)94) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)94) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4154,9 +4154,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+      if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
+        if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.18518518518518517;
@@ -4172,7 +4172,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.03783783783783784;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)105) ) ) {
+          if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)105) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9294117647058824;
@@ -4189,7 +4189,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)89.5) ) ) {
+        if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)89.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -4197,7 +4197,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 1;
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)77.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)77.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -4216,11 +4216,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)81) ) ) {
-    if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)74.5) ) ) {
-      if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)62) ) ) {
-        if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)89) ) ) {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)99) ) ) {
+  if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)74.5) ) ) {
+      if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)62) ) ) {
+        if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)89) ) ) {
+          if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)99) ) ) {
             result[0] += 0.004672897196261682;
             result[1] += 0;
             result[2] += 0;
@@ -4236,7 +4236,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0.07692307692307693;
             result[2] += 0;
@@ -4253,8 +4253,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)66.5) ) ) {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)50.5) ) ) {
+        if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)50.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4270,7 +4270,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.923728813559322;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)59.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)59.5) ) ) {
             result[0] += 0.7954545454545455;
             result[1] += 0.02272727272727273;
             result[2] += 0.011363636363636366;
@@ -4288,9 +4288,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)104.5) ) ) {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)69.5) ) ) {
+      if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)104.5) ) ) {
+        if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)69.5) ) ) {
             result[0] += 0.025210084033613446;
             result[1] += 0.4327731092436975;
             result[2] += 0;
@@ -4306,7 +4306,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.036585365853658534;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)95.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)95.5) ) ) {
             result[0] += 0.00558659217877095;
             result[1] += 0;
             result[2] += 0.22346368715083798;
@@ -4323,8 +4323,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)89.5) ) ) {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)49.5) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)89.5) ) ) {
+          if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)49.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -4340,7 +4340,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)88.5) ) ) {
+          if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)88.5) ) ) {
             result[0] += 0.002583979328165375;
             result[1] += 0.9922480620155039;
             result[2] += 0;
@@ -4359,10 +4359,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)83.5) ) ) {
-      if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)73) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)92.5) ) ) {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)63.5) ) ) {
+    if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)83.5) ) ) {
+      if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)73) ) ) {
+        if ( LIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)92.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)63.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4378,7 +4378,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9583333333333334;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)61.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)61.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4395,8 +4395,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)101) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)99) ) ) {
+        if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)101) ) ) {
+          if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)99) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.1794871794871795;
@@ -4412,7 +4412,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.14814814814814814;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)102.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0.09090909090909091;
             result[2] += 0.36363636363636365;
@@ -4430,9 +4430,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)98.5) ) ) {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
+      if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)98.5) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4448,7 +4448,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)93.5) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)93.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4465,8 +4465,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)70.5) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)115.5) ) ) {
+        if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)70.5) ) ) {
+          if ( LIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)115.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 1;
@@ -4482,7 +4482,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)109.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)109.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9681528662420382;
@@ -4501,11 +4501,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)81) ) ) {
-    if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)62.5) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)67.5) ) ) {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)81) ) ) {
+  if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)62.5) ) ) {
+        if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)67.5) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)81) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4521,7 +4521,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.3333333333333333;
           }
         } else {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)96) ) ) {
+          if ( LIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)96) ) ) {
             result[0] += 0.05128205128205128;
             result[1] += 0.07692307692307693;
             result[2] += 0.1282051282051282;
@@ -4538,8 +4538,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)58) ) ) {
             result[0] += 0.22727272727272727;
             result[1] += 0;
             result[2] += 0;
@@ -4555,7 +4555,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.903337169159954;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)84.5) ) ) {
             result[0] += 0.12307692307692308;
             result[1] += 0.03076923076923077;
             result[2] += 0.02564102564102564;
@@ -4573,9 +4573,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)51.5) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)88) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)51.5) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)88) ) ) {
             result[0] += 0;
             result[1] += 0.125;
             result[2] += 0;
@@ -4591,7 +4591,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)46.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)46.5) ) ) {
             result[0] += 0;
             result[1] += 0.9333333333333333;
             result[2] += 0;
@@ -4608,8 +4608,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)74.5) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)74.5) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)65) ) ) {
             result[0] += 0.028985507246376815;
             result[1] += 0.24637681159420294;
             result[2] += 0;
@@ -4625,7 +4625,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.05351437699680511;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)101.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)101.5) ) ) {
             result[0] += 0.0125;
             result[1] += 0;
             result[2] += 0.11666666666666667;
@@ -4644,9 +4644,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)90.5) ) ) {
+    if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)90.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -4654,7 +4654,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 1;
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.06818181818181819;
@@ -4671,8 +4671,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)120.5) ) ) {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)78.5) ) ) {
+        if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)120.5) ) ) {
+          if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.28571428571428575;
@@ -4697,9 +4697,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)86.5) ) ) {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)94) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)105.5) ) ) {
+      if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)86.5) ) ) {
+        if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)94) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)105.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4715,7 +4715,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)88) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)88) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4732,8 +4732,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)84) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)84) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4749,7 +4749,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.010638297872340425;
           }
         } else {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)100.5) ) ) {
+          if ( UNLIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.75;
@@ -4768,11 +4768,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
-    if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)94) ) ) {
+  if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)63.5) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)94) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4788,7 +4788,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)55.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)55.5) ) ) {
             result[0] += 0.9393939393939394;
             result[1] += 0.06060606060606061;
             result[2] += 0;
@@ -4805,8 +4805,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)66.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4822,7 +4822,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.938858695652174;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)84.5) ) ) {
             result[0] += 0;
             result[1] += 0.05314009661835749;
             result[2] += 0;
@@ -4840,9 +4840,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)53.5) ) ) {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)47) ) ) {
+      if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)53.5) ) ) {
+        if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)47) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -4858,7 +4858,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)63) ) ) {
+          if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)63) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4875,8 +4875,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)73) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)70.5) ) ) {
+        if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)70.5) ) ) {
             result[0] += 0.12903225806451613;
             result[1] += 0.3010752688172043;
             result[2] += 0;
@@ -4892,7 +4892,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.03217821782178218;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)105.5) ) ) {
+          if ( LIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)105.5) ) ) {
             result[0] += 0.006060606060606061;
             result[1] += 0.00909090909090909;
             result[2] += 0.1484848484848485;
@@ -4911,10 +4911,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)100.5) ) ) {
-        if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)97) ) ) {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)69) ) ) {
+    if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)100.5) ) ) {
+        if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)97) ) ) {
+          if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)69) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4930,7 +4930,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.12244897959183673;
           }
         } else {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -4947,7 +4947,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+        if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -4955,7 +4955,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 1;
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)102.5) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5689655172413793;
@@ -4973,9 +4973,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)80) ) ) {
+      if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)80) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3333333333333333;
@@ -4991,7 +4991,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)116.5) ) ) {
+          if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)116.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8737864077669902;
@@ -5008,8 +5008,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)105.5) ) ) {
+        if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)105.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.7916666666666666;
@@ -5025,7 +5025,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.013986013986013986;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)82) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)82) ) ) {
             result[0] += 0.08333333333333333;
             result[1] += 0;
             result[2] += 0.8611111111111112;
@@ -5044,11 +5044,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)79.5) ) ) {
-    if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)84) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)59.5) ) ) {
+  if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)79.5) ) ) {
+    if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)59.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5064,7 +5064,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.13513513513513514;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)54) ) ) {
+          if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)54) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -5081,8 +5081,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)58) ) ) {
             result[0] += 0.5675675675675675;
             result[1] += 0.12162162162162163;
             result[2] += 0;
@@ -5098,7 +5098,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.916083916083916;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)82) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)82) ) ) {
             result[0] += 0.18518518518518517;
             result[1] += 0;
             result[2] += 0.037037037037037035;
@@ -5116,9 +5116,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
-        if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)87) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)51) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
+        if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)87) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)51) ) ) {
             result[0] += 0;
             result[1] += 0.8;
             result[2] += 0;
@@ -5134,7 +5134,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5151,8 +5151,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)73) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)69.5) ) ) {
+        if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)69.5) ) ) {
             result[0] += 0.14285714285714285;
             result[1] += 0.09090909090909091;
             result[2] += 0;
@@ -5168,7 +5168,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.014617368873602751;
           }
         } else {
-          if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)90.5) ) ) {
+          if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)90.5) ) ) {
             result[0] += 0.017543859649122806;
             result[1] += 0.038011695906432746;
             result[2] += 0.1871345029239766;
@@ -5187,10 +5187,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)93) ) ) {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)104) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
+      if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)93) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)104) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.16666666666666666;
@@ -5206,7 +5206,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0.041666666666666664;
             result[2] += 0;
@@ -5223,8 +5223,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)100.5) ) ) {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)94.5) ) ) {
+        if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)100.5) ) ) {
+          if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)94.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5240,7 +5240,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.0425531914893617;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)105.5) ) ) {
+          if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)105.5) ) ) {
             result[0] += 0;
             result[1] += 0.029411764705882353;
             result[2] += 0.7941176470588235;
@@ -5258,9 +5258,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)96.5) ) ) {
             result[0] += 0.023809523809523808;
             result[1] += 0;
             result[2] += 0.6190476190476191;
@@ -5276,7 +5276,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)94.5) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)94.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5293,8 +5293,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)79.5) ) ) {
+        if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)71.5) ) ) {
+          if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)79.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.4;
@@ -5310,7 +5310,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8958333333333334;
@@ -5329,11 +5329,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)113.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)71) ) ) {
+  if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)113.5) ) ) {
+          if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)71) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5357,8 +5357,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)65.5) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)65.5) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)59.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5374,7 +5374,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9468531468531468;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)83.5) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)83.5) ) ) {
             result[0] += 0.09480122324159021;
             result[1] += 0.01834862385321101;
             result[2] += 0.009174311926605505;
@@ -5392,9 +5392,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)100.5) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)51.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)65) ) ) {
+        if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)100.5) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)51.5) ) ) {
             result[0] += 0;
             result[1] += 0.9411764705882353;
             result[2] += 0;
@@ -5418,8 +5418,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)71.5) ) ) {
+        if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)71.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)71.5) ) ) {
             result[0] += 0.3146853146853147;
             result[1] += 0.0979020979020979;
             result[2] += 0;
@@ -5435,7 +5435,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.01303538175046555;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)90.5) ) ) {
+          if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)90.5) ) ) {
             result[0] += 0.024390243902439025;
             result[1] += 0.03048780487804878;
             result[2] += 0.25914634146341464;
@@ -5454,10 +5454,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
-      if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)82) ) ) {
-        if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)88.5) ) ) {
+    if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
+      if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)82) ) ) {
+        if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)88.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5473,7 +5473,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.10526315789473684;
           }
         } else {
-          if ( ( !(data[10].missing != -1) || (data[10].fvalue <= (float)98.5) ) ) {
+          if ( UNLIKELY( !(data[10].missing != -1) || (data[10].fvalue <= (float)98.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5490,8 +5490,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)95) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)104.5) ) ) {
+        if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)95) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)104.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3125;
@@ -5507,7 +5507,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.1;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)117) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)117) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5525,9 +5525,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
+        if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)78.5) ) ) {
+          if ( LIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.23333333333333334;
@@ -5543,7 +5543,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.16666666666666666;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)84.5) ) ) {
             result[0] += 0.012903225806451613;
             result[1] += 0;
             result[2] += 0.7354838709677419;
@@ -5560,8 +5560,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)114.5) ) ) {
+        if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)114.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9271523178807947;
@@ -5577,7 +5577,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)107.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)107.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9874213836477987;
@@ -5596,11 +5596,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)79.5) ) ) {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)74.5) ) ) {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)101) ) ) {
+  if ( LIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)79.5) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)74.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+          if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)101) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5616,7 +5616,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)51.5) ) ) {
+          if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)51.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5633,8 +5633,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)59.5) ) ) {
+        if ( LIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)59.5) ) ) {
             result[0] += 0.516949152542373;
             result[1] += 0;
             result[2] += 0;
@@ -5650,7 +5650,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8877551020408163;
           }
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
             result[0] += 0.012195121951219513;
             result[1] += 0;
             result[2] += 0.012195121951219513;
@@ -5668,9 +5668,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)54.5) ) ) {
-        if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)87) ) ) {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)86) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)54.5) ) ) {
+        if ( UNLIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)87) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)86) ) ) {
             result[0] += 0;
             result[1] += 0.15789473684210525;
             result[2] += 0;
@@ -5686,7 +5686,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)53.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -5703,8 +5703,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)75.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)68.5) ) ) {
+        if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)68.5) ) ) {
             result[0] += 0.12686567164179108;
             result[1] += 0.13432835820895525;
             result[2] += 0;
@@ -5720,7 +5720,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.02717391304347826;
           }
         } else {
-          if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)84) ) ) {
             result[0] += 0.017142857142857144;
             result[1] += 0.03428571428571429;
             result[2] += 0.24;
@@ -5739,10 +5739,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
-      if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)84.5) ) ) {
-        if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)64.5) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)83) ) ) {
+    if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
+      if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)84.5) ) ) {
+        if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)64.5) ) ) {
+          if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)83) ) ) {
             result[0] += 0;
             result[1] += 0.42857142857142855;
             result[2] += 0.42857142857142855;
@@ -5758,7 +5758,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)61) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)61) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 1;
@@ -5775,8 +5775,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.1125;
@@ -5792,7 +5792,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.6666666666666666;
           }
         } else {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)96.5) ) ) {
+          if ( UNLIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)96.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -5810,9 +5810,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)83.5) ) ) {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)88.5) ) ) {
+      if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)83.5) ) ) {
+        if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)78.5) ) ) {
+          if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)88.5) ) ) {
             result[0] += 0.15789473684210525;
             result[1] += 0;
             result[2] += 0.5789473684210527;
@@ -5828,7 +5828,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)107) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5612244897959183;
@@ -5845,8 +5845,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
+        if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5833333333333334;
@@ -5862,7 +5862,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.008032128514056224;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)85.5) ) ) {
             result[0] += 0.009174311926605505;
             result[1] += 0;
             result[2] += 0.9174311926605505;
@@ -5881,11 +5881,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
-    if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)45) ) ) {
+  if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)61.5) ) ) {
+          if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)45) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -5901,7 +5901,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.018779342723004695;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
             result[0] += 0.21052631578947367;
             result[1] += 0;
             result[2] += 0;
@@ -5918,8 +5918,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)87.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
             result[0] += 0.45652173913043476;
             result[1] += 0.2608695652173913;
             result[2] += 0;
@@ -5935,7 +5935,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8931623931623932;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)70.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)70.5) ) ) {
             result[0] += 0.19736842105263158;
             result[1] += 0.15789473684210525;
             result[2] += 0.013157894736842105;
@@ -5953,9 +5953,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)104.5) ) ) {
-        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
-          if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)70.5) ) ) {
+      if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)104.5) ) ) {
+        if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)70.5) ) ) {
             result[0] += 0.13389121338912133;
             result[1] += 0.26778242677824265;
             result[2] += 0.02092050209205021;
@@ -5971,7 +5971,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.07973962571196094;
           }
         } else {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)111.5) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)111.5) ) ) {
             result[0] += 0.03125;
             result[1] += 0.015625;
             result[2] += 0.24375;
@@ -5988,8 +5988,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)58.5) ) ) {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)62) ) ) {
+        if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)58.5) ) ) {
+          if ( UNLIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)62) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6005,7 +6005,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
             result[0] += 0;
             result[1] += 0.9976076555023924;
             result[2] += 0;
@@ -6024,10 +6024,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
-        if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)90) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)68) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)94.5) ) ) {
+        if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)90) ) ) {
+          if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)68) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6043,7 +6043,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9090909090909091;
           }
         } else {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)93.5) ) ) {
+          if ( UNLIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)93.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6060,8 +6060,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)96.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)96.5) ) ) {
+        if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)96.5) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)96.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6077,7 +6077,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)100.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)100.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.631578947368421;
@@ -6095,9 +6095,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
-        if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)121) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)103.5) ) ) {
+        if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
+          if ( LIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)121) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.7614213197969543;
@@ -6113,7 +6113,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.10000000000000002;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6130,8 +6130,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)87.5) ) ) {
-          if ( ( !(data[2].missing != -1) || (data[2].fvalue <= (float)119.5) ) ) {
+        if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)87.5) ) ) {
+          if ( LIKELY( !(data[2].missing != -1) || (data[2].fvalue <= (float)119.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9333333333333333;
@@ -6147,7 +6147,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)79.5) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)79.5) ) ) {
             result[0] += 0.2727272727272727;
             result[1] += 0;
             result[2] += 0.7272727272727273;
@@ -6166,11 +6166,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)81) ) ) {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)69.5) ) ) {
-      if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
-        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
+  if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)69.5) ) ) {
+      if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)62.5) ) ) {
             result[0] += 0;
             result[1] += 0.006329113924050633;
             result[2] += 0;
@@ -6186,7 +6186,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)51.5) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)51.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6203,8 +6203,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)82) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)83.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)82) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6220,7 +6220,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.7692307692307693;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)77) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)77) ) ) {
             result[0] += 0.008695652173913044;
             result[1] += 0;
             result[2] += 0;
@@ -6238,9 +6238,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)56.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)90.5) ) ) {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)92) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)56.5) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)90.5) ) ) {
+          if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)92) ) ) {
             result[0] += 0;
             result[1] += 0.019230769230769232;
             result[2] += 0;
@@ -6256,7 +6256,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)88.5) ) ) {
+          if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)88.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -6273,8 +6273,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)69) ) ) {
+        if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
+          if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)69) ) ) {
             result[0] += 0.6925373134328359;
             result[1] += 0.050746268656716415;
             result[2] += 0;
@@ -6290,7 +6290,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.32869565217391306;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)78) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)78) ) ) {
             result[0] += 0.08823529411764706;
             result[1] += 0.35294117647058826;
             result[2] += 0;
@@ -6309,10 +6309,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
-      if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)96.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)72.5) ) ) {
+    if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)104.5) ) ) {
+      if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)96.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)95.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)72.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.3333333333333333;
@@ -6328,7 +6328,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8214285714285714;
           }
         } else {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)75.5) ) ) {
+          if ( LIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)75.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.33333333333333337;
@@ -6345,8 +6345,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)101.5) ) ) {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)98.5) ) ) {
+        if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)101.5) ) ) {
+          if ( LIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)98.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.34;
@@ -6362,7 +6362,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)91.5) ) ) {
             result[0] += 0;
             result[1] += 0.6666666666666667;
             result[2] += 0;
@@ -6380,8 +6380,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)84.5) ) ) {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)86) ) ) {
+      if ( UNLIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)84.5) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)86) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -6389,7 +6389,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)83.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6406,8 +6406,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)91.5) ) ) {
-          if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)75.5) ) ) {
+        if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)75.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6423,7 +6423,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
             result[0] += 0.05;
             result[1] += 0;
             result[2] += 0.6;
@@ -6442,11 +6442,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)79.5) ) ) {
-    if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)74.5) ) ) {
-      if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)69.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)63.5) ) ) {
+  if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)79.5) ) ) {
+    if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)74.5) ) ) {
+      if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)69.5) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)63.5) ) ) {
             result[0] += 0;
             result[1] += 0.004878048780487805;
             result[2] += 0;
@@ -6462,7 +6462,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.6388888888888888;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)60.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)60.5) ) ) {
             result[0] += 0;
             result[1] += 0.02857142857142857;
             result[2] += 0;
@@ -6479,8 +6479,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6496,7 +6496,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8789189189189189;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)86.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.03937007874015748;
@@ -6514,8 +6514,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)51.5) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)51.5) ) ) {
+      if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)51.5) ) ) {
+        if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)51.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -6523,7 +6523,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)65) ) ) {
+          if ( UNLIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)65) ) ) {
             result[0] += 0.2727272727272727;
             result[1] += 0.09090909090909091;
             result[2] += 0;
@@ -6540,8 +6540,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)73) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)71.5) ) ) {
+        if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)71.5) ) ) {
             result[0] += 0.11458333333333334;
             result[1] += 0.26041666666666674;
             result[2] += 0;
@@ -6557,7 +6557,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.019625334522747548;
           }
         } else {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)96.5) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)96.5) ) ) {
             result[0] += 0.022598870056497175;
             result[1] += 0.01694915254237288;
             result[2] += 0.13559322033898305;
@@ -6576,10 +6576,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)94.5) ) ) {
-        if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)93.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)95) ) ) {
+    if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)100.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)94.5) ) ) {
+        if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)93.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)95) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.1111111111111111;
@@ -6595,7 +6595,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 1;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)97.5) ) ) {
+          if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)97.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6612,8 +6612,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)107) ) ) {
+        if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)84.5) ) ) {
+          if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)107) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.35064935064935066;
@@ -6629,7 +6629,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.47058823529411764;
           }
         } else {
-          if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)95.5) ) ) {
+          if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)95.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6647,9 +6647,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)77) ) ) {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)97.5) ) ) {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)99) ) ) {
+      if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)77) ) ) {
+        if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)97.5) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)99) ) ) {
             result[0] += 0.16666666666666666;
             result[1] += 0.08333333333333333;
             result[2] += 0.25;
@@ -6665,7 +6665,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.1111111111111111;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)99) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)99) ) ) {
             result[0] += 0;
             result[1] += 0.75;
             result[2] += 0;
@@ -6682,8 +6682,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)86.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)58) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -6699,7 +6699,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.031496062992125984;
           }
         } else {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)102.5) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9675456389452333;
@@ -6718,11 +6718,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)75.5) ) ) {
-    if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
-      if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
-        if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)67.5) ) ) {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
+  if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)75.5) ) ) {
+    if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
+      if ( LIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+        if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)67.5) ) ) {
+          if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)61.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6738,7 +6738,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.35714285714285715;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)91) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)91) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6755,7 +6755,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)50.5) ) ) {
+        if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)50.5) ) ) {
           result[0] += 1;
           result[1] += 0;
           result[2] += 0;
@@ -6763,7 +6763,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)94.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)94.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6781,9 +6781,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)58) ) ) {
+      if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
+        if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
+          if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)58) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -6799,7 +6799,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)62.5) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)62.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -6816,7 +6816,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)55.5) ) ) {
+        if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)55.5) ) ) {
           result[0] += 1;
           result[1] += 0;
           result[2] += 0;
@@ -6824,7 +6824,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)80) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)80) ) ) {
             result[0] += 0.02631578947368421;
             result[1] += 0.06578947368421052;
             result[2] += 0;
@@ -6843,10 +6843,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)77) ) ) {
-      if ( ( !(data[1].missing != -1) || (data[1].fvalue <= (float)66.5) ) ) {
-        if ( ( !(data[23].missing != -1) || (data[23].fvalue <= (float)96.5) ) ) {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)40) ) ) {
+    if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)77) ) ) {
+      if ( UNLIKELY( !(data[1].missing != -1) || (data[1].fvalue <= (float)66.5) ) ) {
+        if ( UNLIKELY( !(data[23].missing != -1) || (data[23].fvalue <= (float)96.5) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)40) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -6862,7 +6862,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.018867924528301886;
           }
         } else {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)70) ) ) {
+          if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)70) ) ) {
             result[0] += 0;
             result[1] += 0.5;
             result[2] += 0;
@@ -6879,8 +6879,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)71.5) ) ) {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
+        if ( LIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)71.5) ) ) {
+          if ( UNLIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)65) ) ) {
             result[0] += 0.225;
             result[1] += 0.4;
             result[2] += 0.025;
@@ -6896,7 +6896,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.017910447761194034;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)94.5) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)94.5) ) ) {
             result[0] += 0.1032258064516129;
             result[1] += 0.12258064516129032;
             result[2] += 0.3161290322580645;
@@ -6914,9 +6914,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)102.5) ) ) {
+      if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)103) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)78.5) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)102.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.07894736842105264;
@@ -6932,7 +6932,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.75;
           }
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)78.5) ) ) {
             result[0] += 0.010752688172043012;
             result[1] += 0.03225806451612903;
             result[2] += 0.3118279569892473;
@@ -6949,8 +6949,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)91.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)69.5) ) ) {
+        if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)91.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)69.5) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -6966,7 +6966,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.15384615384615385;
           }
         } else {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)75.5) ) ) {
             result[0] += 0.33333333333333337;
             result[1] += 0;
             result[2] += 0.5625000000000001;
@@ -6985,11 +6985,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)63.5) ) ) {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)72) ) ) {
-          if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)81) ) ) {
+  if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)63.5) ) ) {
+        if ( LIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)72) ) ) {
+          if ( LIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)81) ) ) {
             result[0] += 0.00784313725490196;
             result[1] += 0;
             result[2] += 0;
@@ -7005,7 +7005,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)70.5) ) ) {
+          if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)70.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7022,8 +7022,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
+        if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)56.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -7039,7 +7039,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9240196078431373;
           }
         } else {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
+          if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)73) ) ) {
             result[0] += 0.07450980392156863;
             result[1] += 0.011764705882352941;
             result[2] += 0.01568627450980392;
@@ -7057,8 +7057,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)51.5) ) ) {
-        if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)87.5) ) ) {
+      if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)51.5) ) ) {
+        if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)87.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -7066,7 +7066,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 1;
           result[5] += 0;
         } else {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)82.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)82.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7083,8 +7083,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)99.5) ) ) {
-          if ( ( !(data[7].missing != -1) || (data[7].fvalue <= (float)72.5) ) ) {
+        if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)99.5) ) ) {
+          if ( UNLIKELY( !(data[7].missing != -1) || (data[7].fvalue <= (float)72.5) ) ) {
             result[0] += 0.06711409395973154;
             result[1] += 0.026845637583892617;
             result[2] += 0.053691275167785234;
@@ -7100,7 +7100,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.07868525896414343;
           }
         } else {
-          if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)88.5) ) ) {
+          if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)88.5) ) ) {
             result[0] += 0.4074074074074074;
             result[1] += 0;
             result[2] += 0.4074074074074074;
@@ -7119,10 +7119,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)73.5) ) ) {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)65) ) ) {
+    if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)96.5) ) ) {
+      if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
+        if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)73.5) ) ) {
+          if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)65) ) ) {
             result[0] += 0;
             result[1] += 0.1111111111111111;
             result[2] += 0.5555555555555556;
@@ -7138,7 +7138,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8846153846153846;
           }
         } else {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)62.5) ) ) {
             result[0] += 0;
             result[1] += 0.3333333333333333;
             result[2] += 0.25;
@@ -7155,7 +7155,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)96.5) ) ) {
+        if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)96.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -7163,7 +7163,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)91) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)91) ) ) {
             result[0] += 0.25;
             result[1] += 0;
             result[2] += 0;
@@ -7181,8 +7181,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)71.5) ) ) {
-        if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)92) ) ) {
+      if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)71.5) ) ) {
+        if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)92) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 1;
@@ -7198,8 +7198,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)85.5) ) ) {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)95.5) ) ) {
+        if ( UNLIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)95.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9473684210526315;
@@ -7215,7 +7215,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)72.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)72.5) ) ) {
             result[0] += 1;
             result[1] += 0;
             result[2] += 0;
@@ -7234,11 +7234,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)78.5) ) ) {
-    if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)97) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)66.5) ) ) {
+  if ( LIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)78.5) ) ) {
+    if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
+        if ( LIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)97) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)66.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7254,7 +7254,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.5;
           }
         } else {
-          if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)98.5) ) ) {
+          if ( LIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)98.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7271,8 +7271,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)56.5) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)56.5) ) ) {
             result[0] += 0.723404255319149;
             result[1] += 0;
             result[2] += 0;
@@ -7288,7 +7288,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.8832807570977917;
           }
         } else {
-          if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)83.5) ) ) {
+          if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)83.5) ) ) {
             result[0] += 0.02;
             result[1] += 0;
             result[2] += 0.02;
@@ -7306,8 +7306,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)50) ) ) {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)88.5) ) ) {
+      if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)50) ) ) {
+        if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)88.5) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -7323,8 +7323,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[5] += 0;
         }
       } else {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)68.5) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)50.5) ) ) {
+        if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)68.5) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)50.5) ) ) {
             result[0] += 0.4411764705882353;
             result[1] += 0.4411764705882353;
             result[2] += 0;
@@ -7340,7 +7340,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.05454545454545454;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
+          if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
             result[0] += 0.8040322580645163;
             result[1] += 0.01774193548387097;
             result[2] += 0.012096774193548388;
@@ -7359,10 +7359,10 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
-      if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)74.5) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
-          if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)95) ) ) {
+    if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)91.5) ) ) {
+      if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)74.5) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)95) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7378,7 +7378,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.3333333333333333;
           }
         } else {
-          if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)88.5) ) ) {
+          if ( LIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)88.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7395,8 +7395,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[29].missing != -1) || (data[29].fvalue <= (float)70.5) ) ) {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)107.5) ) ) {
+        if ( UNLIKELY( !(data[29].missing != -1) || (data[29].fvalue <= (float)70.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)107.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5;
@@ -7412,7 +7412,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)93.5) ) ) {
+          if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)93.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.037037037037037035;
@@ -7430,9 +7430,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)95.5) ) ) {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
-          if ( ( !(data[28].missing != -1) || (data[28].fvalue <= (float)76.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)95.5) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
+          if ( UNLIKELY( !(data[28].missing != -1) || (data[28].fvalue <= (float)76.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7448,7 +7448,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.058823529411764705;
           }
         } else {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)104.5) ) ) {
+          if ( LIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)104.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.5342465753424658;
@@ -7465,8 +7465,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)77) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)102.5) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)77) ) ) {
+          if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)102.5) ) ) {
             result[0] += 0.07692307692307693;
             result[1] += 0;
             result[2] += 0.6153846153846154;
@@ -7482,7 +7482,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)84.5) ) ) {
             result[0] += 0.02413793103448276;
             result[1] += 0;
             result[2] += 0.7896551724137931;
@@ -7501,11 +7501,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
-    if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
-      if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)99) ) ) {
+  if ( LIKELY( !(data[32].missing != -1) || (data[32].fvalue <= (float)78.5) ) ) {
+    if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)73.5) ) ) {
+      if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)60.5) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)65) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)99) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7521,7 +7521,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)89) ) ) {
+          if ( LIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)89) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.058823529411764705;
@@ -7538,8 +7538,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)86.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)58) ) ) {
             result[0] += 0.6888888888888889;
             result[1] += 0;
             result[2] += 0;
@@ -7555,7 +7555,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.914519906323185;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)66.5) ) ) {
             result[0] += 0.631578947368421;
             result[1] += 0.2894736842105263;
             result[2] += 0;
@@ -7573,9 +7573,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[31].missing != -1) || (data[31].fvalue <= (float)104.5) ) ) {
-        if ( ( !(data[5].missing != -1) || (data[5].fvalue <= (float)69.5) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)48.5) ) ) {
+      if ( LIKELY( !(data[31].missing != -1) || (data[31].fvalue <= (float)104.5) ) ) {
+        if ( UNLIKELY( !(data[5].missing != -1) || (data[5].fvalue <= (float)69.5) ) ) {
+          if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)48.5) ) ) {
             result[0] += 0;
             result[1] += 0.8928571428571429;
             result[2] += 0;
@@ -7591,7 +7591,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.04093567251461988;
           }
         } else {
-          if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)75.5) ) ) {
+          if ( UNLIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)75.5) ) ) {
             result[0] += 0.2893617021276596;
             result[1] += 0.004255319148936171;
             result[2] += 0.025531914893617023;
@@ -7608,8 +7608,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[18].missing != -1) || (data[18].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)106) ) ) {
+        if ( UNLIKELY( !(data[18].missing != -1) || (data[18].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)106) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7625,7 +7625,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)72.5) ) ) {
+          if ( LIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)72.5) ) ) {
             result[0] += 0.004514672686230248;
             result[1] += 0.9932279909706546;
             result[2] += 0;
@@ -7644,9 +7644,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
-      if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)77) ) ) {
-        if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)63) ) ) {
+    if ( UNLIKELY( !(data[15].missing != -1) || (data[15].fvalue <= (float)78.5) ) ) {
+      if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)77) ) ) {
+        if ( UNLIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)63) ) ) {
           result[0] += 0;
           result[1] += 0;
           result[2] += 0;
@@ -7654,7 +7654,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 1;
           result[5] += 0;
         } else {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)107.5) ) ) {
+          if ( LIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)107.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.0297029702970297;
@@ -7671,8 +7671,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[30].missing != -1) || (data[30].fvalue <= (float)97.5) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
+        if ( UNLIKELY( !(data[30].missing != -1) || (data[30].fvalue <= (float)97.5) ) ) {
+          if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)96.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.026315789473684213;
@@ -7688,7 +7688,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)78.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.14285714285714285;
@@ -7706,9 +7706,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
-        if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)88.5) ) ) {
-          if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)93) ) ) {
+        if ( UNLIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)88.5) ) ) {
+          if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)72.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7724,7 +7724,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.6666666666666666;
           }
         } else {
-          if ( ( !(data[34].missing != -1) || (data[34].fvalue <= (float)99) ) ) {
+          if ( UNLIKELY( !(data[34].missing != -1) || (data[34].fvalue <= (float)99) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7741,8 +7741,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)78.5) ) ) {
-          if ( ( !(data[13].missing != -1) || (data[13].fvalue <= (float)104) ) ) {
+        if ( UNLIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)78.5) ) ) {
+          if ( LIKELY( !(data[13].missing != -1) || (data[13].fvalue <= (float)104) ) ) {
             result[0] += 0.03333333333333334;
             result[1] += 0.13333333333333336;
             result[2] += 0.6333333333333334;
@@ -7758,7 +7758,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)85.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)85.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8166666666666668;
@@ -7777,11 +7777,11 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   }
-  if ( ( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
-    if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)72.5) ) ) {
-      if ( ( !(data[16].missing != -1) || (data[16].fvalue <= (float)61.5) ) ) {
-        if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
-          if ( ( !(data[9].missing != -1) || (data[9].fvalue <= (float)48.5) ) ) {
+  if ( LIKELY( !(data[12].missing != -1) || (data[12].fvalue <= (float)81) ) ) {
+    if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)72.5) ) ) {
+      if ( UNLIKELY( !(data[16].missing != -1) || (data[16].fvalue <= (float)61.5) ) ) {
+        if ( LIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)60.5) ) ) {
+          if ( UNLIKELY( !(data[9].missing != -1) || (data[9].fvalue <= (float)48.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7797,7 +7797,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)56.5) ) ) {
+          if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)56.5) ) ) {
             result[0] += 0.8484848484848485;
             result[1] += 0;
             result[2] += 0;
@@ -7814,8 +7814,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[3].missing != -1) || (data[3].fvalue <= (float)65.5) ) ) {
-          if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)58) ) ) {
+        if ( LIKELY( !(data[3].missing != -1) || (data[3].fvalue <= (float)65.5) ) ) {
+          if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)58) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7831,7 +7831,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.9621451104100947;
           }
         } else {
-          if ( ( !(data[26].missing != -1) || (data[26].fvalue <= (float)88.5) ) ) {
+          if ( LIKELY( !(data[26].missing != -1) || (data[26].fvalue <= (float)88.5) ) ) {
             result[0] += 0;
             result[1] += 0.01639344262295082;
             result[2] += 0;
@@ -7849,9 +7849,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)51.5) ) ) {
-        if ( ( !(data[22].missing != -1) || (data[22].fvalue <= (float)89.5) ) ) {
-          if ( ( !(data[0].missing != -1) || (data[0].fvalue <= (float)50) ) ) {
+      if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)51.5) ) ) {
+        if ( UNLIKELY( !(data[22].missing != -1) || (data[22].fvalue <= (float)89.5) ) ) {
+          if ( UNLIKELY( !(data[0].missing != -1) || (data[0].fvalue <= (float)50) ) ) {
             result[0] += 0;
             result[1] += 1;
             result[2] += 0;
@@ -7867,7 +7867,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[11].missing != -1) || (data[11].fvalue <= (float)66.5) ) ) {
+          if ( UNLIKELY( !(data[11].missing != -1) || (data[11].fvalue <= (float)66.5) ) ) {
             result[0] += 0;
             result[1] += 0.9090909090909091;
             result[2] += 0;
@@ -7884,8 +7884,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
-          if ( ( !(data[21].missing != -1) || (data[21].fvalue <= (float)70.5) ) ) {
+        if ( LIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)73) ) ) {
+          if ( UNLIKELY( !(data[21].missing != -1) || (data[21].fvalue <= (float)70.5) ) ) {
             result[0] += 0.22099447513812154;
             result[1] += 0.16022099447513813;
             result[2] += 0;
@@ -7901,7 +7901,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.024227234753550535;
           }
         } else {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)111.5) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)111.5) ) ) {
             result[0] += 0.025714285714285714;
             result[1] += 0.045714285714285714;
             result[2] += 0.2;
@@ -7920,9 +7920,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
       }
     }
   } else {
-    if ( ( !(data[20].missing != -1) || (data[20].fvalue <= (float)82.5) ) ) {
-      if ( ( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
-        if ( ( !(data[8].missing != -1) || (data[8].fvalue <= (float)52.5) ) ) {
+    if ( UNLIKELY( !(data[20].missing != -1) || (data[20].fvalue <= (float)82.5) ) ) {
+      if ( UNLIKELY( !(data[14].missing != -1) || (data[14].fvalue <= (float)101.5) ) ) {
+        if ( UNLIKELY( !(data[8].missing != -1) || (data[8].fvalue <= (float)52.5) ) ) {
           result[0] += 0;
           result[1] += 1;
           result[2] += 0;
@@ -7930,7 +7930,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
           result[4] += 0;
           result[5] += 0;
         } else {
-          if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)70.5) ) ) {
+          if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)70.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -7947,8 +7947,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)93) ) ) {
-          if ( ( !(data[33].missing != -1) || (data[33].fvalue <= (float)90) ) ) {
+        if ( UNLIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)93) ) ) {
+          if ( LIKELY( !(data[33].missing != -1) || (data[33].fvalue <= (float)90) ) ) {
             result[0] += 0.022727272727272728;
             result[1] += 0.11363636363636363;
             result[2] += 0.36363636363636365;
@@ -7964,7 +7964,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0.058823529411764705;
           }
         } else {
-          if ( ( !(data[6].missing != -1) || (data[6].fvalue <= (float)110.5) ) ) {
+          if ( LIKELY( !(data[6].missing != -1) || (data[6].fvalue <= (float)110.5) ) ) {
             result[0] += 0.06;
             result[1] += 0;
             result[2] += 0.89;
@@ -7982,9 +7982,9 @@ void predict(union Entry* data, int pred_margin, float* result) {
         }
       }
     } else {
-      if ( ( !(data[4].missing != -1) || (data[4].fvalue <= (float)85.5) ) ) {
-        if ( ( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
-          if ( ( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
+      if ( UNLIKELY( !(data[4].missing != -1) || (data[4].fvalue <= (float)85.5) ) ) {
+        if ( UNLIKELY( !(data[35].missing != -1) || (data[35].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[24].missing != -1) || (data[24].fvalue <= (float)85.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.4318181818181818;
@@ -8000,7 +8000,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[25].missing != -1) || (data[25].fvalue <= (float)118) ) ) {
+          if ( LIKELY( !(data[25].missing != -1) || (data[25].fvalue <= (float)118) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.9225352112676056;
@@ -8017,8 +8017,8 @@ void predict(union Entry* data, int pred_margin, float* result) {
           }
         }
       } else {
-        if ( ( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
-          if ( ( !(data[17].missing != -1) || (data[17].fvalue <= (float)106.5) ) ) {
+        if ( UNLIKELY( !(data[19].missing != -1) || (data[19].fvalue <= (float)84) ) ) {
+          if ( LIKELY( !(data[17].missing != -1) || (data[17].fvalue <= (float)106.5) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0.8625;
@@ -8034,7 +8034,7 @@ void predict(union Entry* data, int pred_margin, float* result) {
             result[5] += 0;
           }
         } else {
-          if ( ( !(data[27].missing != -1) || (data[27].fvalue <= (float)69) ) ) {
+          if ( UNLIKELY( !(data[27].missing != -1) || (data[27].fvalue <= (float)69) ) ) {
             result[0] += 0;
             result[1] += 0;
             result[2] += 0;
@@ -8085,7 +8085,7 @@ int main() {
     char line[1024];
     
 
-    FILE* file = fopen("./codegen/dataset_146/split_3/test_data.csv", "r");
+    FILE* file = fopen("./codegen_small/dataset_146/split_3/test_data.csv", "r");
     if (file == NULL) {
         printf("Error opening file\n");
         return 1;
@@ -8099,6 +8099,338 @@ int main() {
             while (*ptr != ',' && *ptr != '\n' && *ptr != '\0') ptr++;  // Skip to next comma
             if (*ptr == ',') ptr++;  // Move past the comma
         }
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
+        predict(input, 0, result);
         predict(input, 0, result);
         
     }

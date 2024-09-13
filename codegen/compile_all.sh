@@ -13,7 +13,7 @@ do
                     # If ./main does not exists in this directory, compile
                     if [ ! -f "$dir4/main" ]; then
                         echo "Compiling $dir4"
-                        cd "$dir4" && gcc -o main -O3 main.c && cd ../../../../../
+                        cd "$dir4" && gcc -o main -O3 -g main.c && cd ../../../../../
                     fi
                 done
             done
