@@ -22,13 +22,20 @@ def output_to_csv(dataset, split, n_estimators, max_depth, implementation, perf_
     output_list = perf_output.decode('utf-8').replace('\n', ',').split(',')
     perf_counter_values = [output_list[i-2] for i, x in enumerate(output_list) if x[:-2] in perf_counters]
 
+    # Divide the perf counter values by the number of iterations
+    perf_counter_values = [str(float(x) / (10000 // n_estimators)) for x in perf_counter_values if x != '<not counted>']
+
     with open(args.output, 'a') as file:
         file.write(','.join([dataset, str(split), str(n_estimators), str(max_depth), implementation, *perf_counter_values]) + '\n')
 
 
 def run_perf_counters(dirpath):
     # Run the perf counters on the executable in the given directory
-    return subprocess.run(['perf', 'stat', '-e', ','.join(perf_counters), '--field-separator=,', f'{dirpath}/main'], check=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE).stderr
+    try:
+        return subprocess.run(['perf', 'stat', '-e', ','.join(perf_counters), '--field-separator=,', f'{dirpath}/main'], check=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE).stderr
+    except subprocess.CalledProcessError as e:
+        print("Error running performance counters", e)
+        return None
 
 
 if __name__ == '__main__':
@@ -36,13 +43,19 @@ if __name__ == '__main__':
     with open(args.output, 'w') as file:
         file.write(','.join(['dataset', 'split', 'n_estimators', 'max_depth', 'implementation', *perf_counters]) + '\n')
 
+    # Setup a probe for the predict function
+    os.system('perf probe "predict"')
+
     # Loop over all datasets, splits, n_estimators, max_depths, and implementations, and run perf command
     for _ in range(n_iterations):
         for dataset in args.datasets:
             for split in range(args.classifiers):
                 for n in args.n_estimators:
+                    n_iterations = int(1000 / n)
                     for m in args.max_depth:
                         for implementation in implementations:
-                            dirpath = f'./codegen/{dataset}/split_{split}/n_estimators_{n}/max_depth_{m}/{implementation}'
+                            dirpath = f'./codegen_small/{dataset}/split_{split}/n_estimators_{n}/max_depth_{m}/{implementation}'
+                            print("Running", dirpath)
                             perf_output = run_perf_counters(dirpath)
-                            output_to_csv(dataset, split, n, m, implementation, perf_output)
+                            if perf_output is not None:
+                                output_to_csv(dataset, split, n, m, implementation, perf_output)
