@@ -23,16 +23,16 @@ def output_to_csv(dataset, split, n_estimators, max_depth, implementation, perf_
     perf_counter_values = [output_list[i-2] for i, x in enumerate(output_list) if x[:-2] in perf_counters]
 
     # Divide the perf counter values by the number of iterations
-    perf_counter_values = []
+    perf_counter_values_normalized = []
     for x in perf_counter_values:
         try:
-            perf_counter_values.append(str(float(x) // n_iterations))
+            perf_counter_values_normalized.append(str(float(x) // n_iterations))
         except ValueError:
             # If the value is not a number, just append it as is
-            perf_counter_values.append(x)
+            perf_counter_values_normalized.append(x)
 
     with open(args.output, 'a') as file:
-        file.write(','.join([dataset, str(split), str(n_estimators), str(max_depth), implementation, *perf_counter_values]) + '\n')
+        file.write(','.join([dataset, str(split), str(n_estimators), str(max_depth), implementation, *perf_counter_values_normalized]) + '\n')
 
 
 def run_perf_counters(dirpath):
