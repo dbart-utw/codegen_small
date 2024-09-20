@@ -57,7 +57,7 @@ if __name__ == '__main__':
         for dataset in args.datasets:
             for split in range(args.classifiers):
                 for n in args.n_estimators:
-                    n_iterations = int(1000 / n)
+                    n_iterations = int(10000 / n)
                     for m in args.max_depth:
                         for implementation in implementations:
                             dirpath = f'./codegen_small/{dataset}/split_{split}/n_estimators_{n}/max_depth_{m}/{implementation}'
