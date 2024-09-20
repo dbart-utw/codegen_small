@@ -13,7 +13,7 @@ do
                     # If ./main does not exists in this directory, compile
                     if [ ! -f "$dir4/main" ]; then
                         echo "Compiling $dir4"
-                        cd "$dir4" && arm-linux-gnueabi-gcc -g -o main -O3 main.c && cd ../../../../../
+                        cd "$dir4" && riscv64-unknown-elf-gcc -g -o main -O3 -march=rv64imafdc -mabi=lp64d main.c && cd ../../../../../
                     fi
                 done
             done
