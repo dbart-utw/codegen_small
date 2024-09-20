@@ -3800,7 +3800,7 @@ int main() {
     char line[1024];
     
 
-    FILE* file = fopen("./../../codegen_small/codegen_small/dataset_148/split_4/test_data.csv", "r");
+    FILE* file = fopen("./codegen_small/dataset_148/split_4/test_data.csv", "r");
     if (file == NULL) {
         printf("Error opening file\n");
         return 1;
